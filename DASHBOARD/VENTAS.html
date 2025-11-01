@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GYM LENIN - Sistema de Ventas</title>
+    <link rel="stylesheet" href="CSS/VENTAS.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="IMAGES/GYM.ico" />
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <h1>GYM LENIN</h1>
+                <div class="logo-wrapper">
+                    <img src="IMAGES/LISTO.png" alt="Logo GYM LENIN" class="logo-rustico">
+                </div>
+                <p>Sistema de Ventas</p>
+            </div>
+            <!-- Botón para ir a Miembros -->
+            <div class="header-actions">
+                <a href="MIEMBROS.html" class="btn members-btn">
+                    <i class="bi bi-people-fill me-1"></i> Ir a Miembros
+                </a>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="form-group">
+
+            </div>
+
+            <section class="sales-container">
+                <div class="product-selection">
+                    <div class="form-group">
+                        <label for="category">Categoría:</label>
+                        <select id="category" class="form-control">
+                            <option value="">Seleccione categoría</option>
+                            <option value="merch">Merch (Ropa y accesorios)</option>
+                            <option value="suplementos">Suplementos</option>
+                            <option value="alimentos">Alimentos</option>
+                            <option value="bebidas">Bebidas</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="product">Producto:</label>
+                        <select id="product" class="form-control" disabled>
+                            <option value="">Seleccione producto</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="price">Precio:</label>
+                        <input type="text" id="price" class="form-control" readonly>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="quantity">Cantidad:</label>
+                        <input type="number" id="quantity" class="form-control" min="1" value="1">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="special-requests">Observaciones:</label>
+                        <textarea id="special-requests" class="form-control" rows="2"
+                            placeholder="Ej: Talla, sabor, etc."></textarea>
+                    </div>
+
+                    <button id="add-product" class="btn primary">Agregar Producto</button>
+                </div>
+
+                <div class="product-image">
+                    <img id="product-img" src="IMAGES/VENTA.ico" alt="Imagen del producto">
+                </div>
+            </section>
+
+            <section class="sales-table-container">
+                <table class="sales-table">
+                    <thead>
+                        <tr>
+                            <th>Producto</th>
+                            <th>Cantidad</th>
+                            <th>Precio Unitario</th>
+                            <th>Subtotal</th>
+                            <th>Acción</th>
+                        </tr>
+                    </thead>
+                    <tbody id="sales-table-body">
+                        <!-- Productos se agregan dinámicamente -->
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="3" class="total-label">Total:</td>
+                            <td id="total-amount" class="total-amount">$0.00</td>
+                            <td></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </section>
+
+            <div class="payment-method">
+                <h3>Método de Pago</h3>
+                <div class="form-group">
+                    <label>
+                        <input type="radio" name="payment-method" value="efectivo" checked> Efectivo
+                    </label>
+                    <label>
+                        <input type="radio" name="payment-method" value="transferencia"> Transferencia Bancaria
+                    </label>
+                </div>
+                <div id="cash-container" class="form-group">
+                    <label for="cash-received">Efectivo Recibido:</label>
+                    <input type="number" id="cash-received" class="form-control" min="0" step="0.01">
+                    <p id="cash-change" class="cash-change">Cambio: $0.00</p>
+                </div>
+            </div>
+
+            <div class="action-buttons">
+                <button id="clear-sale" class="btn danger">Limpiar Venta</button>
+                <button id="complete-sale" class="btn success">Realizar Venta</button>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modal para el ticket -->
+    <div id="ticket-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="ticket-content" class="ticket-content">
+                <!-- Contenido del ticket -->
+            </div>
+            <button id="print-ticket" class="btn print">Imprimir Ticket</button>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="JAVA/VENTAS.js"></script>
+</body>
+
+</html>

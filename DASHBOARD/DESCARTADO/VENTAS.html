@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Ventas - PowerGym</title>
+    <link rel="stylesheet" href="CSS/VENTAS.css">
+    <link rel="icon" href="IMAGES/LISTO.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <img src="IMAGES/LISTO.png" alt="Logo PowerGym" class="logo">
+            <h1>Lenin GYM</h1>
+        </header>
+
+        <div class="main-content">
+            <!-- Paso 1: Selección de categoría -->
+            <div class="step" id="step-category">
+                <h2>Paso 1: Selecciona una categoría</h2>
+                <div class="category-buttons">
+                    <button class="category-btn" data-category="merch">
+                        <img src="IMAGES/ROPA.ico" alt="Merch">
+                        <span>Merch (Ropa)</span>
+                    </button>
+                    <button class="category-btn" data-category="suplementos">
+                        <img src="IMAGES/PROTEINA.ico" alt="Suplementos">
+                        <span>Suplementos</span>
+                    </button>
+                    <button class="category-btn" data-category="alimentos">
+                        <img src="IMAGES/ALIMENTOS.ico" alt="Alimentos">
+                        <span>Alimentos</span>
+                    </button>
+                    <button class="category-btn" data-category="bebidas">
+                        <img src="IMAGES/AGUA.ico" alt="Bebidas">
+                        <span>Bebidas</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Paso 2: Selección de producto -->
+            <div class="step hidden" id="step-product">
+                <h2>Paso 2: Selecciona un producto de <span id="current-category"></span></h2>
+                <button class="back-btn" id="back-to-category">← Volver a categorías</button>
+                <div class="products-grid" id="products-grid"></div>
+
+                <div class="custom-product-form">
+                    <h3>¿No encuentras el producto?</h3>
+                    <form id="custom-product-form">
+                        <input type="text" id="custom-product-name" placeholder="Nombre del producto" required>
+                        <input type="number" id="custom-product-price" step="0.01" min="0" placeholder="Precio"
+                            required>
+                        <button type="submit">Agregar producto personalizado</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Paso 3: Carrito y pago -->
+            <div class="step hidden" id="step-cart">
+                <h2>Paso 3: Carrito de Compras</h2>
+                <button class="back-btn" id="back-to-product">← Volver a productos</button>
+
+                <div class="cart-items" id="cart-items">
+                    <p class="empty-cart">El carrito está vacío</p>
+                </div>
+
+                <div class="cart-totals">
+                    <p>Total: <span id="total-amount">$0.00</span></p>
+                </div>
+
+                <div class="payment-section">
+                    <h3>Método de Pago</h3>
+                    <div class="payment-methods">
+                        <label>
+                            <input type="radio" name="payment-method" value="efectivo" checked>
+                            Efectivo
+                        </label>
+                        <label>
+                            <input type="radio" name="payment-method" value="transferencia">
+                            Transferencia
+                        </label>
+                    </div>
+
+                    <div class="cash-payment" id="cash-payment">
+                        <label for="cash-amount">Monto recibido:</label>
+                        <input type="number" id="cash-amount" min="0" step="0.01" placeholder="0.00">
+                        <p>Cambio: <span id="change-amount">$0.00</span></p>
+                    </div>
+                </div>
+
+                <button class="checkout-btn" id="checkout-btn">Procesar Venta</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="JAVA/VENTAS.js"></script>
+</body>
+
+</html>

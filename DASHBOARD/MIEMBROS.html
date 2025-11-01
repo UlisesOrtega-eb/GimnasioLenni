@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Miembros - Gimnasio Lenin</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="CSS/MIEMBROS.css">
+</head>
+
+<body>
+    <header class="gym-header py-3 mb-4">
+        <div class="container">
+            <div class="d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center">
+                    <img src="IMAGES/BOB (2).png" alt="Logo Gimnasio Lenin" class="gym-logo me-3">
+                    <h1 class="gym-title mb-0">GIMNASIO LENIN</h1>
+                </div>
+                <nav class="d-flex gap-2">
+                    <!-- Nuevo botón de Ventas -->
+                    <a href="VENTAS.html" class="btn btn-outline-success">
+                        <i class="bi bi-cart-plus me-1"></i> Ir a Ventas
+                    </a>
+                    <a href="../REGISTRO.html" class="btn btn-outline-primary">
+                        <i class="bi bi-person-plus me-1"></i> Nuevo Registro
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="container py-4">
+        <!-- Estadísticas -->
+        <div class="row mb-4">
+            <div class="col-md-4">
+                <div class="card stat-card">
+                    <div class="card-body text-center">
+                        <h3><i class="bi bi-people-fill text-primary"></i></h3>
+                        <h2 id="total-miembros">0</h2>
+                        <p class="stat-label">Total de Miembros</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card stat-card">
+                    <div class="card-body text-center">
+                        <h3><i class="bi bi-clock-history text-warning"></i></h3>
+                        <h2 id="proximos-vencer">0</h2>
+                        <p class="stat-label">Por Vencer (7 días)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card stat-card">
+                    <div class="card-body text-center">
+                        <h3><i class="bi bi-gender-male text-info"></i>/<i class="bi bi-gender-female text-danger"></i>
+                        </h3>
+                        <h2 id="ratio-genero">0:0</h2>
+                        <p class="stat-label">Ratio Hombres:Mujeres</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="card gym-card shadow-lg mb-4">
+                    <div class="card-header gym-card-header d-flex justify-content-between align-items-center">
+                        <h3 class="mb-0">
+                            <i class="bi bi-people-fill me-2"></i>
+                            Gestión de Miembros
+                        </h3>
+                        <div class="d-flex align-items-center">
+                            <span class="badge bg-primary me-2" id="contador-miembros">0 miembros</span>
+                            <button class="btn btn-sm btn-outline-secondary" id="btn-refresh">
+                                <i class="bi bi-arrow-clockwise"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <!-- Barra de búsqueda y filtros -->
+                        <div class="row mb-4">
+                            <div class="col-md-8">
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="bi bi-search"></i></span>
+                                    <input type="text" id="busqueda" class="form-control"
+                                        placeholder="Buscar por nombre, apellido..." aria-label="Buscar">
+                                    <button class="btn btn-outline-secondary" type="button"
+                                        id="btn-limpiar">Limpiar</button>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <select id="filtro-sexo" class="form-select">
+                                    <option value="">Todos los sexos</option>
+                                    <option value="M">Masculino</option>
+                                    <option value="F">Femenino</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Tabla de miembros -->
+                        <div class="table-responsive">
+                            <table class="table table-hover" id="tabla-miembros">
+                                <thead class="table-dark">
+                                    <tr>
+                                        <th>Nombre</th>
+                                        <th>Apellido Paterno</th>
+                                        <th>Apellido Materno</th>
+                                        <th>Edad</th>
+                                        <th>Sexo</th>
+                                        <th>Fecha de Registro</th>
+                                        <th>Días Restantes</th>
+                                        <th>Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="cuerpo-tabla">
+                                    <!-- Los datos se cargarán aquí mediante JavaScript -->
+                                    <tr>
+                                        <td colspan="8" class="text-center">
+                                            <div class="spinner-border text-primary" role="status">
+                                                <span class="visually-hidden">Cargando...</span>
+                                            </div>
+                                            <p class="mt-2">Cargando miembros...</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Paginación -->
+                        <nav aria-label="Page navigation">
+                            <ul class="pagination justify-content-center" id="paginacion">
+                                <li class="page-item disabled">
+                                    <a class="page-link" href="#" tabindex="-1">Anterior</a>
+                                </li>
+                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item disabled">
+                                    <a class="page-link" href="#">Siguiente</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="gym-footer mt-5 py-3 text-center">
+        <div class="container">
+            <p class="mb-0">© 2023 Gimnasio Lenin - Transformando vidas a través del fitness</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="JAVA/MIEMBROS.js"></script>
+</body>
+
+</html>

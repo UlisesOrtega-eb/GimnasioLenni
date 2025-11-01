@@ -1,0 +1,1648 @@
+[2025-09-09 07:06:35] Conexión a BD exitosa
+[2025-09-09 07:06:35] Tipo de reporte: dia
+[2025-09-09 07:06:35] Filtro base: DATE(%s) = :fecha
+[2025-09-09 07:06:35] Parámetros: {":fecha":"2025-09-09"}
+[2025-09-09 07:06:35] WHERE ventas: DATE(fecha_venta) = :fecha
+[2025-09-09 07:06:35] WHERE miembros: DATE(fecha_registro) = :fecha
+[2025-09-09 07:06:35] WHERE movimientos: DATE(fecha) = :fecha
+[2025-09-09 07:06:35] Query ventas: 
+        SELECT 
+            v.id,
+            v.fecha_venta,
+            p.nombre as producto,
+            v.cantidad,
+            p.precio as precio_unitario,
+            v.monto_total,
+            v.metodo_pago
+        FROM ventas v
+        JOIN productos p ON v.producto_id = p.id
+        WHERE DATE(fecha_venta) = :fecha
+        ORDER BY v.fecha_venta DESC
+    
+[2025-09-09 07:06:35] Ventas encontradas: 0
+[2025-09-09 07:06:35] Totales ventas: {"total":"0.00","efectivo":"0.00","tarjeta":"0.00","transferencia":"0.00"}
+[2025-09-09 07:06:35] Miembros encontrados: 0
+[2025-09-09 07:06:35] Totales inscripciones: {"total_miembros":0,"total_ingresos":"0","hombres":"0","mujeres":"0"}
+[2025-09-09 07:06:35] Error PDO: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'concepto' in 'field list'
+[2025-09-09 07:06:48] Conexión a BD exitosa
+[2025-09-09 07:06:48] Tipo de reporte: dia
+[2025-09-09 07:06:48] Filtro base: DATE(%s) = :fecha
+[2025-09-09 07:06:48] Parámetros: {":fecha":"2025-09-09"}
+[2025-09-09 07:06:48] WHERE ventas: DATE(fecha_venta) = :fecha
+[2025-09-09 07:06:48] WHERE miembros: DATE(fecha_registro) = :fecha
+[2025-09-09 07:06:48] WHERE movimientos: DATE(fecha) = :fecha
+[2025-09-09 07:06:48] Query ventas: 
+        SELECT 
+            v.id,
+            v.fecha_venta,
+            p.nombre as producto,
+            v.cantidad,
+            p.precio as precio_unitario,
+            v.monto_total,
+            v.metodo_pago
+        FROM ventas v
+        JOIN productos p ON v.producto_id = p.id
+        WHERE DATE(fecha_venta) = :fecha
+        ORDER BY v.fecha_venta DESC
+    
+[2025-09-09 07:06:48] Ventas encontradas: 0
+[2025-09-09 07:06:48] Totales ventas: {"total":"0.00","efectivo":"0.00","tarjeta":"0.00","transferencia":"0.00"}
+[2025-09-09 07:06:48] Miembros encontrados: 0
+[2025-09-09 07:06:48] Totales inscripciones: {"total_miembros":0,"total_ingresos":"0","hombres":"0","mujeres":"0"}
+[2025-09-09 07:06:48] Error PDO: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'concepto' in 'field list'
+[2025-09-09 07:06:49] Conexión a BD exitosa
+[2025-09-09 07:06:49] Tipo de reporte: dia
+[2025-09-09 07:06:49] Filtro base: DATE(%s) = :fecha
+[2025-09-09 07:06:49] Parámetros: {":fecha":"2025-09-09"}
+[2025-09-09 07:06:49] WHERE ventas: DATE(fecha_venta) = :fecha
+[2025-09-09 07:06:49] WHERE miembros: DATE(fecha_registro) = :fecha
+[2025-09-09 07:06:49] WHERE movimientos: DATE(fecha) = :fecha
+[2025-09-09 07:06:49] Query ventas: 
+        SELECT 
+            v.id,
+            v.fecha_venta,
+            p.nombre as producto,
+            v.cantidad,
+            p.precio as precio_unitario,
+            v.monto_total,
+            v.metodo_pago
+        FROM ventas v
+        JOIN productos p ON v.producto_id = p.id
+        WHERE DATE(fecha_venta) = :fecha
+        ORDER BY v.fecha_venta DESC
+    
+[2025-09-09 07:06:49] Ventas encontradas: 0
+[2025-09-09 07:06:49] Totales ventas: {"total":"0.00","efectivo":"0.00","tarjeta":"0.00","transferencia":"0.00"}
+[2025-09-09 07:06:49] Miembros encontrados: 0
+[2025-09-09 07:06:49] Totales inscripciones: {"total_miembros":0,"total_ingresos":"0","hombres":"0","mujeres":"0"}
+[2025-09-09 07:06:49] Error PDO: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'concepto' in 'field list'
+[2025-09-09 07:06:53] Conexión a BD exitosa
+[2025-09-09 07:06:53] Tipo de reporte: mes
+[2025-09-09 07:06:53] Filtro base: DATE(%s) BETWEEN :primerDia AND :ultimoDia
+[2025-09-09 07:06:53] Parámetros: {":primerDia":"2025-09-01",":ultimoDia":"2025-09-30"}
+[2025-09-09 07:06:53] WHERE ventas: DATE(fecha_venta) BETWEEN :primerDia AND :ultimoDia
+[2025-09-09 07:06:53] WHERE miembros: DATE(fecha_registro) BETWEEN :primerDia AND :ultimoDia
+[2025-09-09 07:06:53] WHERE movimientos: DATE(fecha) BETWEEN :primerDia AND :ultimoDia
+[2025-09-09 07:06:53] Query ventas: 
+        SELECT 
+            v.id,
+            v.fecha_venta,
+            p.nombre as producto,
+            v.cantidad,
+            p.precio as precio_unitario,
+            v.monto_total,
+            v.metodo_pago
+        FROM ventas v
+        JOIN productos p ON v.producto_id = p.id
+        WHERE DATE(fecha_venta) BETWEEN :primerDia AND :ultimoDia
+        ORDER BY v.fecha_venta DESC
+    
+[2025-09-09 07:06:53] Ventas encontradas: 17
+[2025-09-09 07:06:53] Totales ventas: {"total":"7294.24","efectivo":"2600.00","tarjeta":"0.00","transferencia":"4694.24"}
+[2025-09-09 07:06:53] Miembros encontrados: 6
+[2025-09-09 07:06:53] Totales inscripciones: {"total_miembros":6,"total_ingresos":"1600","hombres":"3","mujeres":"3"}
+[2025-09-09 07:06:53] Error PDO: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'concepto' in 'field list'
+[2025-09-09 07:08:53] Conexión a BD exitosa
+[2025-09-09 07:08:53] Tipo de reporte: dia
+[2025-09-09 07:08:53] Filtro base: DATE(%s) = :fecha
+[2025-09-09 07:08:53] Parámetros: {":fecha":"2025-09-09"}
+[2025-09-09 07:08:53] WHERE ventas: DATE(fecha_venta) = :fecha
+[2025-09-09 07:08:53] WHERE miembros: DATE(fecha_registro) = :fecha
+[2025-09-09 07:08:53] WHERE movimientos: DATE(fecha) = :fecha
+[2025-09-09 07:08:53] Query ventas: 
+        SELECT 
+            v.id,
+            v.fecha_venta,
+            p.nombre as producto,
+            v.cantidad,
+            p.precio as precio_unitario,
+            v.monto_total,
+            v.metodo_pago
+        FROM ventas v
+        JOIN productos p ON v.producto_id = p.id
+        WHERE DATE(fecha_venta) = :fecha
+        ORDER BY v.fecha_venta DESC
+    
+[2025-09-09 07:08:53] Ventas encontradas: 0
+[2025-09-09 07:08:53] Totales ventas: {"total":"0.00","efectivo":"0.00","tarjeta":"0.00","transferencia":"0.00"}
+[2025-09-09 07:08:53] Miembros encontrados: 0
+[2025-09-09 07:08:53] Totales inscripciones: {"total_miembros":0,"total_ingresos":"0","hombres":"0","mujeres":"0"}
+[2025-09-09 07:08:53] Error PDO: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'concepto' in 'field list'
+[2025-09-09 07:09:00] Conexión a BD exitosa
+[2025-09-09 07:09:00] Tipo de reporte: dia
+[2025-09-09 07:09:00] Filtro base: DATE(%s) = :fecha
+[2025-09-09 07:09:00] Parámetros: {":fecha":"2025-09-09"}
+[2025-09-09 07:09:00] WHERE ventas: DATE(fecha_venta) = :fecha
+[2025-09-09 07:09:00] WHERE miembros: DATE(fecha_registro) = :fecha
+[2025-09-09 07:09:00] WHERE movimientos: DATE(fecha) = :fecha
+[2025-09-09 07:09:00] Query ventas: 
+        SELECT 
+            v.id,
+            v.fecha_venta,
+            p.nombre as producto,
+            v.cantidad,
+            p.precio as precio_unitario,
+            v.monto_total,
+            v.metodo_pago
+        FROM ventas v
+        JOIN productos p ON v.producto_id = p.id
+        WHERE DATE(fecha_venta) = :fecha
+        ORDER BY v.fecha_venta DESC
+    
+[2025-09-09 07:09:00] Ventas encontradas: 0
+[2025-09-09 07:09:00] Totales ventas: {"total":"0.00","efectivo":"0.00","tarjeta":"0.00","transferencia":"0.00"}
+[2025-09-09 07:09:00] Miembros encontrados: 0
+[2025-09-09 07:09:00] Totales inscripciones: {"total_miembros":0,"total_ingresos":"0","hombres":"0","mujeres":"0"}
+[2025-09-09 07:09:00] Error PDO: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'concepto' in 'field list'
+[2025-09-09 07:18:55] Conexión a BD exitosa
+[2025-09-09 07:18:55] Tipo de reporte: dia
+[2025-09-09 07:18:55] Filtro base: DATE(%s) = :fecha
+[2025-09-09 07:18:55] Parámetros: {":fecha":"2025-09-09"}
+[2025-09-09 07:18:55] WHERE ventas: DATE(fecha_venta) = :fecha
+[2025-09-09 07:18:55] WHERE miembros: DATE(fecha_registro) = :fecha
+[2025-09-09 07:18:55] WHERE movimientos: DATE(fecha) = :fecha
+[2025-09-09 07:18:55] Query ventas: 
+        SELECT 
+            v.id,
+            v.fecha_venta,
+            p.nombre as producto,
+            v.cantidad,
+            p.precio as precio_unitario,
+            v.monto_total,
+            v.metodo_pago
+        FROM ventas v
+        JOIN productos p ON v.producto_id = p.id
+        WHERE DATE(fecha_venta) = :fecha
+        ORDER BY v.fecha_venta DESC
+    
+[2025-09-09 07:18:55] Ventas encontradas: 0
+[2025-09-09 07:18:55] Totales ventas: {"total":"0.00","efectivo":"0.00","tarjeta":"0.00","transferencia":"0.00"}
+[2025-09-09 07:18:55] Miembros encontrados: 0
+[2025-09-09 07:18:55] Totales inscripciones: {"total_miembros":0,"total_ingresos":"0","hombres":"0","mujeres":"0"}
+[2025-09-09 07:18:55] Error PDO: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'concepto' in 'field list'
+[2025-09-09 07:19:04] Conexión a BD exitosa
+[2025-09-09 07:19:04] Tipo de reporte: mes
+[2025-09-09 07:19:04] Filtro base: DATE(%s) BETWEEN :primerDia AND :ultimoDia
+[2025-09-09 07:19:04] Parámetros: {":primerDia":"2025-09-01",":ultimoDia":"2025-09-30"}
+[2025-09-09 07:19:04] WHERE ventas: DATE(fecha_venta) BETWEEN :primerDia AND :ultimoDia
+[2025-09-09 07:19:04] WHERE miembros: DATE(fecha_registro) BETWEEN :primerDia AND :ultimoDia
+[2025-09-09 07:19:04] WHERE movimientos: DATE(fecha) BETWEEN :primerDia AND :ultimoDia
+[2025-09-09 07:19:04] Query ventas: 
+        SELECT 
+            v.id,
+            v.fecha_venta,
+            p.nombre as producto,
+            v.cantidad,
+            p.precio as precio_unitario,
+            v.monto_total,
+            v.metodo_pago
+        FROM ventas v
+        JOIN productos p ON v.producto_id = p.id
+        WHERE DATE(fecha_venta) BETWEEN :primerDia AND :ultimoDia
+        ORDER BY v.fecha_venta DESC
+    
+[2025-09-09 07:19:04] Ventas encontradas: 17
+[2025-09-09 07:19:04] Totales ventas: {"total":"7294.24","efectivo":"2600.00","tarjeta":"0.00","transferencia":"4694.24"}
+[2025-09-09 07:19:04] Miembros encontrados: 6
+[2025-09-09 07:19:04] Totales inscripciones: {"total_miembros":6,"total_ingresos":"1600","hombres":"3","mujeres":"3"}
+[2025-09-09 07:19:04] Error PDO: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'concepto' in 'field list'
+[2025-09-09 07:19:31] Conexión a BD exitosa
+[2025-09-09 07:19:31] Tipo de reporte: dia
+[2025-09-09 07:19:31] Filtro base: DATE(%s) = :fecha
+[2025-09-09 07:19:31] Parámetros: {":fecha":"2025-09-09"}
+[2025-09-09 07:19:31] WHERE ventas: DATE(fecha_venta) = :fecha
+[2025-09-09 07:19:31] WHERE miembros: DATE(fecha_registro) = :fecha
+[2025-09-09 07:19:31] WHERE movimientos: DATE(fecha) = :fecha
+[2025-09-09 07:19:31] Query ventas: 
+        SELECT 
+            v.id,
+            v.fecha_venta,
+            p.nombre as producto,
+            v.cantidad,
+            p.precio as precio_unitario,
+            v.monto_total,
+            v.metodo_pago
+        FROM ventas v
+        JOIN productos p ON v.producto_id = p.id
+        WHERE DATE(fecha_venta) = :fecha
+        ORDER BY v.fecha_venta DESC
+    
+[2025-09-09 07:19:31] Ventas encontradas: 0
+[2025-09-09 07:19:31] Totales ventas: {"total":"0.00","efectivo":"0.00","tarjeta":"0.00","transferencia":"0.00"}
+[2025-09-09 07:19:31] Miembros encontrados: 0
+[2025-09-09 07:19:31] Totales inscripciones: {"total_miembros":0,"total_ingresos":"0","hombres":"0","mujeres":"0"}
+[2025-09-09 07:19:31] Error PDO: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'concepto' in 'field list'
+[2025-09-09 07:20:40] Conexión a BD exitosa
+[2025-09-09 07:20:40] Tipo de reporte: dia
+[2025-09-09 07:20:40] Filtro base: DATE(%s) = :fecha
+[2025-09-09 07:20:40] Parámetros: {":fecha":"2025-09-09"}
+[2025-09-09 07:20:40] WHERE ventas: DATE(fecha_venta) = :fecha
+[2025-09-09 07:20:40] WHERE miembros: DATE(fecha_registro) = :fecha
+[2025-09-09 07:20:40] WHERE movimientos: DATE(fecha) = :fecha
+[2025-09-09 07:20:40] Query ventas: 
+        SELECT 
+            v.id,
+            v.fecha_venta,
+            p.nombre as producto,
+            v.cantidad,
+            p.precio as precio_unitario,
+            v.monto_total,
+            v.metodo_pago
+        FROM ventas v
+        JOIN productos p ON v.producto_id = p.id
+        WHERE DATE(fecha_venta) = :fecha
+        ORDER BY v.fecha_venta DESC
+    
+[2025-09-09 07:20:40] Ventas encontradas: 0
+[2025-09-09 07:20:40] Totales ventas: {"total":"0.00","efectivo":"0.00","tarjeta":"0.00","transferencia":"0.00"}
+[2025-09-09 07:20:40] Miembros encontrados: 0
+[2025-09-09 07:20:40] Totales inscripciones: {"total_miembros":0,"total_ingresos":"0","hombres":"0","mujeres":"0"}
+[2025-09-09 07:20:40] Error PDO: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'concepto' in 'field list'
+[2025-09-09 07:20:45] Conexión a BD exitosa
+[2025-09-09 07:20:45] Tipo de reporte: mes
+[2025-09-09 07:20:45] Filtro base: DATE(%s) BETWEEN :primerDia AND :ultimoDia
+[2025-09-09 07:20:45] Parámetros: {":primerDia":"2025-09-01",":ultimoDia":"2025-09-30"}
+[2025-09-09 07:20:45] WHERE ventas: DATE(fecha_venta) BETWEEN :primerDia AND :ultimoDia
+[2025-09-09 07:20:45] WHERE miembros: DATE(fecha_registro) BETWEEN :primerDia AND :ultimoDia
+[2025-09-09 07:20:45] WHERE movimientos: DATE(fecha) BETWEEN :primerDia AND :ultimoDia
+[2025-09-09 07:20:45] Query ventas: 
+        SELECT 
+            v.id,
+            v.fecha_venta,
+            p.nombre as producto,
+            v.cantidad,
+            p.precio as precio_unitario,
+            v.monto_total,
+            v.metodo_pago
+        FROM ventas v
+        JOIN productos p ON v.producto_id = p.id
+        WHERE DATE(fecha_venta) BETWEEN :primerDia AND :ultimoDia
+        ORDER BY v.fecha_venta DESC
+    
+[2025-09-09 07:20:45] Ventas encontradas: 17
+[2025-09-09 07:20:45] Totales ventas: {"total":"7294.24","efectivo":"2600.00","tarjeta":"0.00","transferencia":"4694.24"}
+[2025-09-09 07:20:45] Miembros encontrados: 6
+[2025-09-09 07:20:45] Totales inscripciones: {"total_miembros":6,"total_ingresos":"1600","hombres":"3","mujeres":"3"}
+[2025-09-09 07:20:45] Error PDO: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'concepto' in 'field list'
+[2025-09-09 07:27:51] Conexión a BD exitosa
+[2025-09-09 07:27:51] Tipo de reporte: dia
+[2025-09-09 07:27:51] Filtro base: DATE(%s) = :fecha
+[2025-09-09 07:27:51] Parámetros: {":fecha":"2025-09-09"}
+[2025-09-09 07:27:51] WHERE ventas: DATE(fecha_venta) = :fecha
+[2025-09-09 07:27:51] WHERE miembros: DATE(fecha_registro) = :fecha
+[2025-09-09 07:27:51] WHERE movimientos: DATE(fecha) = :fecha
+[2025-09-09 07:27:51] Query ventas: 
+        SELECT 
+            v.id,
+            v.fecha_venta,
+            p.nombre as producto,
+            v.cantidad,
+            p.precio as precio_unitario,
+            v.monto_total,
+            v.metodo_pago
+        FROM ventas v
+        JOIN productos p ON v.producto_id = p.id
+        WHERE DATE(fecha_venta) = :fecha
+        ORDER BY v.fecha_venta DESC
+    
+[2025-09-09 07:27:51] Ventas encontradas: 0
+[2025-09-09 07:27:51] Totales ventas: {"total":"0.00","efectivo":"0.00","tarjeta":"0.00","transferencia":"0.00"}
+[2025-09-09 07:27:51] Miembros encontrados: 0
+[2025-09-09 07:27:51] Totales inscripciones: {"total_miembros":0,"total_ingresos":"0","hombres":"0","mujeres":"0"}
+[2025-09-09 07:27:51] Error PDO: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'concepto' in 'field list'
+[2025-09-09 07:27:57] Conexión a BD exitosa
+[2025-09-09 07:27:57] Tipo de reporte: mes
+[2025-09-09 07:27:57] Filtro base: DATE(%s) BETWEEN :primerDia AND :ultimoDia
+[2025-09-09 07:27:57] Parámetros: {":primerDia":"2025-09-01",":ultimoDia":"2025-09-30"}
+[2025-09-09 07:27:57] WHERE ventas: DATE(fecha_venta) BETWEEN :primerDia AND :ultimoDia
+[2025-09-09 07:27:57] WHERE miembros: DATE(fecha_registro) BETWEEN :primerDia AND :ultimoDia
+[2025-09-09 07:27:57] WHERE movimientos: DATE(fecha) BETWEEN :primerDia AND :ultimoDia
+[2025-09-09 07:27:57] Query ventas: 
+        SELECT 
+            v.id,
+            v.fecha_venta,
+            p.nombre as producto,
+            v.cantidad,
+            p.precio as precio_unitario,
+            v.monto_total,
+            v.metodo_pago
+        FROM ventas v
+        JOIN productos p ON v.producto_id = p.id
+        WHERE DATE(fecha_venta) BETWEEN :primerDia AND :ultimoDia
+        ORDER BY v.fecha_venta DESC
+    
+[2025-09-09 07:27:57] Ventas encontradas: 17
+[2025-09-09 07:27:57] Totales ventas: {"total":"7294.24","efectivo":"2600.00","tarjeta":"0.00","transferencia":"4694.24"}
+[2025-09-09 07:27:57] Miembros encontrados: 6
+[2025-09-09 07:27:57] Totales inscripciones: {"total_miembros":6,"total_ingresos":"1600","hombres":"3","mujeres":"3"}
+[2025-09-09 07:27:57] Error PDO: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'concepto' in 'field list'
+[2025-09-09 07:28:06] Conexión a BD exitosa
+[2025-09-09 07:28:06] Tipo de reporte: dia
+[2025-09-09 07:28:06] Filtro base: DATE(%s) = :fecha
+[2025-09-09 07:28:06] Parámetros: {":fecha":"2025-09-09"}
+[2025-09-09 07:28:06] WHERE ventas: DATE(fecha_venta) = :fecha
+[2025-09-09 07:28:06] WHERE miembros: DATE(fecha_registro) = :fecha
+[2025-09-09 07:28:06] WHERE movimientos: DATE(fecha) = :fecha
+[2025-09-09 07:28:06] Query ventas: 
+        SELECT 
+            v.id,
+            v.fecha_venta,
+            p.nombre as producto,
+            v.cantidad,
+            p.precio as precio_unitario,
+            v.monto_total,
+            v.metodo_pago
+        FROM ventas v
+        JOIN productos p ON v.producto_id = p.id
+        WHERE DATE(fecha_venta) = :fecha
+        ORDER BY v.fecha_venta DESC
+    
+[2025-09-09 07:28:06] Ventas encontradas: 0
+[2025-09-09 07:28:06] Totales ventas: {"total":"0.00","efectivo":"0.00","tarjeta":"0.00","transferencia":"0.00"}
+[2025-09-09 07:28:06] Miembros encontrados: 0
+[2025-09-09 07:28:06] Totales inscripciones: {"total_miembros":0,"total_ingresos":"0","hombres":"0","mujeres":"0"}
+[2025-09-09 07:28:06] Error PDO: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'concepto' in 'field list'
+[2025-09-09 07:28:13] Conexión a BD exitosa
+[2025-09-09 07:28:13] Tipo de reporte: mes
+[2025-09-09 07:28:13] Filtro base: DATE(%s) BETWEEN :primerDia AND :ultimoDia
+[2025-09-09 07:28:13] Parámetros: {":primerDia":"2025-09-01",":ultimoDia":"2025-09-30"}
+[2025-09-09 07:28:13] WHERE ventas: DATE(fecha_venta) BETWEEN :primerDia AND :ultimoDia
+[2025-09-09 07:28:13] WHERE miembros: DATE(fecha_registro) BETWEEN :primerDia AND :ultimoDia
+[2025-09-09 07:28:13] WHERE movimientos: DATE(fecha) BETWEEN :primerDia AND :ultimoDia
+[2025-09-09 07:28:13] Query ventas: 
+        SELECT 
+            v.id,
+            v.fecha_venta,
+            p.nombre as producto,
+            v.cantidad,
+            p.precio as precio_unitario,
+            v.monto_total,
+            v.metodo_pago
+        FROM ventas v
+        JOIN productos p ON v.producto_id = p.id
+        WHERE DATE(fecha_venta) BETWEEN :primerDia AND :ultimoDia
+        ORDER BY v.fecha_venta DESC
+    
+[2025-09-09 07:28:13] Ventas encontradas: 17
+[2025-09-09 07:28:13] Totales ventas: {"total":"7294.24","efectivo":"2600.00","tarjeta":"0.00","transferencia":"4694.24"}
+[2025-09-09 07:28:13] Miembros encontrados: 6
+[2025-09-09 07:28:13] Totales inscripciones: {"total_miembros":6,"total_ingresos":"1600","hombres":"3","mujeres":"3"}
+[2025-09-09 07:28:13] Error PDO: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'concepto' in 'field list'
+[2025-09-09 07:28:38] Conexión a BD exitosa
+[2025-09-09 07:28:38] Tipo de reporte: dia
+[2025-09-09 07:28:38] Filtro base: DATE(%s) = :fecha
+[2025-09-09 07:28:38] Parámetros: {":fecha":"2025-09-09"}
+[2025-09-09 07:28:38] WHERE ventas: DATE(fecha_venta) = :fecha
+[2025-09-09 07:28:38] WHERE miembros: DATE(fecha_registro) = :fecha
+[2025-09-09 07:28:38] WHERE movimientos: DATE(fecha) = :fecha
+[2025-09-09 07:28:38] Query ventas: 
+        SELECT 
+            v.id,
+            v.fecha_venta,
+            p.nombre as producto,
+            v.cantidad,
+            p.precio as precio_unitario,
+            v.monto_total,
+            v.metodo_pago
+        FROM ventas v
+        JOIN productos p ON v.producto_id = p.id
+        WHERE DATE(fecha_venta) = :fecha
+        ORDER BY v.fecha_venta DESC
+    
+[2025-09-09 07:28:38] Ventas encontradas: 0
+[2025-09-09 07:28:38] Totales ventas: {"total":"0.00","efectivo":"0.00","tarjeta":"0.00","transferencia":"0.00"}
+[2025-09-09 07:28:38] Miembros encontrados: 0
+[2025-09-09 07:28:38] Totales inscripciones: {"total_miembros":0,"total_ingresos":"0","hombres":"0","mujeres":"0"}
+[2025-09-09 07:28:38] Error PDO: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'concepto' in 'field list'
+[2025-09-09 07:32:28] Conexión a BD exitosa
+[2025-09-09 07:32:28] Tipo de reporte: dia
+[2025-09-09 07:32:28] Filtro base: DATE(%s) = :fecha
+[2025-09-09 07:32:28] Parámetros: {":fecha":"2025-09-09"}
+[2025-09-09 07:32:28] WHERE ventas: DATE(fecha_venta) = :fecha
+[2025-09-09 07:32:28] WHERE miembros: DATE(fecha_registro) = :fecha
+[2025-09-09 07:32:28] WHERE movimientos: DATE(fecha) = :fecha
+[2025-09-09 07:32:28] Query ventas: 
+        SELECT 
+            v.id,
+            v.fecha_venta,
+            p.nombre as producto,
+            v.cantidad,
+            p.precio as precio_unitario,
+            v.monto_total,
+            v.metodo_pago
+        FROM ventas v
+        JOIN productos p ON v.producto_id = p.id
+        WHERE DATE(fecha_venta) = :fecha
+        ORDER BY v.fecha_venta DESC
+    
+[2025-09-09 07:32:28] Ventas encontradas: 0
+[2025-09-09 07:32:28] Totales ventas: {"total":"0.00","efectivo":"0.00","tarjeta":"0.00","transferencia":"0.00"}
+[2025-09-09 07:32:28] Miembros encontrados: 0
+[2025-09-09 07:32:28] Totales inscripciones: {"total_miembros":0,"total_ingresos":"0","hombres":"0","mujeres":"0"}
+[2025-09-09 07:32:28] Estructura de movimientos_caja: [{"Field":"id","Type":"int(11)","Null":"NO","Key":"PRI","Default":null,"Extra":"auto_increment"},{"Field":"tipo","Type":"enum('ingreso','egreso')","Null":"NO","Key":"","Default":null,"Extra":""},{"Field":"monto","Type":"decimal(10,2)","Null":"NO","Key":"","Default":null,"Extra":""},{"Field":"motivo","Type":"varchar(255)","Null":"NO","Key":"","Default":null,"Extra":""},{"Field":"fecha_movimiento","Type":"timestamp","Null":"YES","Key":"","Default":"current_timestamp()","Extra":""}]
+[2025-09-09 07:32:28] Query movimientos: 
+        SELECT id, tipo, monto, fecha
+        FROM movimientos_caja
+        WHERE DATE(fecha) = :fecha
+        ORDER BY fecha DESC
+    
+[2025-09-09 07:32:28] Error PDO: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'fecha' in 'field list'
+[2025-09-09 07:32:29] Conexión a BD exitosa
+[2025-09-09 07:32:29] Tipo de reporte: dia
+[2025-09-09 07:32:29] Filtro base: DATE(%s) = :fecha
+[2025-09-09 07:32:29] Parámetros: {":fecha":"2025-09-09"}
+[2025-09-09 07:32:29] WHERE ventas: DATE(fecha_venta) = :fecha
+[2025-09-09 07:32:29] WHERE miembros: DATE(fecha_registro) = :fecha
+[2025-09-09 07:32:29] WHERE movimientos: DATE(fecha) = :fecha
+[2025-09-09 07:32:29] Query ventas: 
+        SELECT 
+            v.id,
+            v.fecha_venta,
+            p.nombre as producto,
+            v.cantidad,
+            p.precio as precio_unitario,
+            v.monto_total,
+            v.metodo_pago
+        FROM ventas v
+        JOIN productos p ON v.producto_id = p.id
+        WHERE DATE(fecha_venta) = :fecha
+        ORDER BY v.fecha_venta DESC
+    
+[2025-09-09 07:32:29] Ventas encontradas: 0
+[2025-09-09 07:32:29] Totales ventas: {"total":"0.00","efectivo":"0.00","tarjeta":"0.00","transferencia":"0.00"}
+[2025-09-09 07:32:29] Miembros encontrados: 0
+[2025-09-09 07:32:29] Totales inscripciones: {"total_miembros":0,"total_ingresos":"0","hombres":"0","mujeres":"0"}
+[2025-09-09 07:32:29] Estructura de movimientos_caja: [{"Field":"id","Type":"int(11)","Null":"NO","Key":"PRI","Default":null,"Extra":"auto_increment"},{"Field":"tipo","Type":"enum('ingreso','egreso')","Null":"NO","Key":"","Default":null,"Extra":""},{"Field":"monto","Type":"decimal(10,2)","Null":"NO","Key":"","Default":null,"Extra":""},{"Field":"motivo","Type":"varchar(255)","Null":"NO","Key":"","Default":null,"Extra":""},{"Field":"fecha_movimiento","Type":"timestamp","Null":"YES","Key":"","Default":"current_timestamp()","Extra":""}]
+[2025-09-09 07:32:29] Query movimientos: 
+        SELECT id, tipo, monto, fecha
+        FROM movimientos_caja
+        WHERE DATE(fecha) = :fecha
+        ORDER BY fecha DESC
+    
+[2025-09-09 07:32:29] Error PDO: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'fecha' in 'field list'
+[2025-09-09 07:34:12] Conexión a BD exitosa
+[2025-09-09 07:34:12] Tipo de reporte: dia
+[2025-09-09 07:34:12] Filtro base: DATE(%s) = :fecha
+[2025-09-09 07:34:12] Parámetros: {":fecha":"2025-09-09"}
+[2025-09-09 07:34:12] WHERE ventas: DATE(fecha_venta) = :fecha
+[2025-09-09 07:34:12] WHERE miembros: DATE(fecha_registro) = :fecha
+[2025-09-09 07:34:12] WHERE movimientos: DATE(fecha) = :fecha
+[2025-09-09 07:34:12] Query ventas: 
+        SELECT 
+            v.id,
+            v.fecha_venta,
+            p.nombre as producto,
+            v.cantidad,
+            p.precio as precio_unitario,
+            v.monto_total,
+            v.metodo_pago
+        FROM ventas v
+        JOIN productos p ON v.producto_id = p.id
+        WHERE DATE(fecha_venta) = :fecha
+        ORDER BY v.fecha_venta DESC
+    
+[2025-09-09 07:34:12] Ventas encontradas: 0
+[2025-09-09 07:34:12] Totales ventas: {"total":"0.00","efectivo":"0.00","tarjeta":"0.00","transferencia":"0.00"}
+[2025-09-09 07:34:12] Miembros encontrados: 0
+[2025-09-09 07:34:12] Totales inscripciones: {"total_miembros":0,"total_ingresos":"0","hombres":"0","mujeres":"0"}
+[2025-09-09 07:34:12] Estructura de movimientos_caja: [{"Field":"id","Type":"int(11)","Null":"NO","Key":"PRI","Default":null,"Extra":"auto_increment"},{"Field":"tipo","Type":"enum('ingreso','egreso')","Null":"NO","Key":"","Default":null,"Extra":""},{"Field":"monto","Type":"decimal(10,2)","Null":"NO","Key":"","Default":null,"Extra":""},{"Field":"motivo","Type":"varchar(255)","Null":"NO","Key":"","Default":null,"Extra":""},{"Field":"fecha_movimiento","Type":"timestamp","Null":"YES","Key":"","Default":"current_timestamp()","Extra":""}]
+[2025-09-09 07:34:12] Query movimientos: 
+        SELECT id, tipo, monto, fecha
+        FROM movimientos_caja
+        WHERE DATE(fecha) = :fecha
+        ORDER BY fecha DESC
+    
+[2025-09-09 07:34:12] Error PDO: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'fecha' in 'field list'
+[2025-09-09 07:34:25] Conexión a BD exitosa
+[2025-09-09 07:34:25] Tipo de reporte: dia
+[2025-09-09 07:34:25] Filtro base: DATE(%s) = :fecha
+[2025-09-09 07:34:25] Parámetros: {":fecha":"2025-09-09"}
+[2025-09-09 07:34:25] WHERE ventas: DATE(fecha_venta) = :fecha
+[2025-09-09 07:34:25] WHERE miembros: DATE(fecha_registro) = :fecha
+[2025-09-09 07:34:25] WHERE movimientos: DATE(fecha) = :fecha
+[2025-09-09 07:34:25] Query ventas: 
+        SELECT 
+            v.id,
+            v.fecha_venta,
+            p.nombre as producto,
+            v.cantidad,
+            p.precio as precio_unitario,
+            v.monto_total,
+            v.metodo_pago
+        FROM ventas v
+        JOIN productos p ON v.producto_id = p.id
+        WHERE DATE(fecha_venta) = :fecha
+        ORDER BY v.fecha_venta DESC
+    
+[2025-09-09 07:34:25] Ventas encontradas: 0
+[2025-09-09 07:34:25] Totales ventas: {"total":"0.00","efectivo":"0.00","tarjeta":"0.00","transferencia":"0.00"}
+[2025-09-09 07:34:25] Miembros encontrados: 0
+[2025-09-09 07:34:25] Totales inscripciones: {"total_miembros":0,"total_ingresos":"0","hombres":"0","mujeres":"0"}
+[2025-09-09 07:34:25] Estructura de movimientos_caja: [{"Field":"id","Type":"int(11)","Null":"NO","Key":"PRI","Default":null,"Extra":"auto_increment"},{"Field":"tipo","Type":"enum('ingreso','egreso')","Null":"NO","Key":"","Default":null,"Extra":""},{"Field":"monto","Type":"decimal(10,2)","Null":"NO","Key":"","Default":null,"Extra":""},{"Field":"motivo","Type":"varchar(255)","Null":"NO","Key":"","Default":null,"Extra":""},{"Field":"fecha_movimiento","Type":"timestamp","Null":"YES","Key":"","Default":"current_timestamp()","Extra":""}]
+[2025-09-09 07:34:25] Query movimientos: 
+        SELECT id, tipo, monto, fecha
+        FROM movimientos_caja
+        WHERE DATE(fecha) = :fecha
+        ORDER BY fecha DESC
+    
+[2025-09-09 07:34:25] Error PDO: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'fecha' in 'field list'
+[2025-09-09 07:38:52] Conexión a BD exitosa
+[2025-09-09 07:38:52] Tipo de reporte: dia
+[2025-09-09 07:38:52] Filtro base: DATE(%s) = :fecha
+[2025-09-09 07:38:52] Parámetros: {":fecha":"2025-09-09"}
+[2025-09-09 07:38:52] WHERE ventas: DATE(fecha_venta) = :fecha
+[2025-09-09 07:38:52] Query ventas: 
+        SELECT 
+            v.id,
+            v.fecha_venta,
+            p.nombre as producto,
+            v.cantidad,
+            p.precio as precio_unitario,
+            v.monto_total,
+            v.metodo_pago
+        FROM ventas v
+        JOIN productos p ON v.producto_id = p.id
+        WHERE DATE(fecha_venta) = :fecha
+        ORDER BY v.fecha_venta DESC
+    
+[2025-09-09 07:38:52] Ventas encontradas: 0
+[2025-09-09 07:38:52] Totales ventas: {"total":"0.00","efectivo":"0.00","tarjeta":"0.00","transferencia":"0.00"}
+[2025-09-09 07:38:52] WHERE miembros: DATE(fecha_registro) = :fecha
+[2025-09-09 07:38:52] Miembros encontrados: 0
+[2025-09-09 07:38:52] Totales inscripciones: {"total_miembros":0,"total_ingresos":"0","hombres":"0","mujeres":"0"}
+[2025-09-09 07:38:52] Estructura de movimientos_caja: [{"Field":"id","Type":"int(11)","Null":"NO","Key":"PRI","Default":null,"Extra":"auto_increment"},{"Field":"tipo","Type":"enum('ingreso','egreso')","Null":"NO","Key":"","Default":null,"Extra":""},{"Field":"monto","Type":"decimal(10,2)","Null":"NO","Key":"","Default":null,"Extra":""},{"Field":"motivo","Type":"varchar(255)","Null":"NO","Key":"","Default":null,"Extra":""},{"Field":"fecha_movimiento","Type":"timestamp","Null":"YES","Key":"","Default":"current_timestamp()","Extra":""}]
+[2025-09-09 07:38:52] WHERE movimientos: DATE(fecha_actualizacion) = :fecha
+[2025-09-09 07:38:52] Query movimientos: 
+        SELECT id, tipo, monto, fecha_actualizacion as fecha
+        FROM movimientos_caja
+        WHERE DATE(fecha_actualizacion) = :fecha
+        ORDER BY fecha_actualizacion DESC
+    
+[2025-09-09 07:38:52] Error PDO: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'fecha_actualizacion' in 'field list'
+[2025-09-09 07:43:28] Conexión a BD exitosa
+[2025-09-09 07:43:28] Tipo de reporte: dia
+[2025-09-09 07:43:28] Filtro base: DATE(%s) = :fecha
+[2025-09-09 07:43:28] Parámetros: {":fecha":"2025-09-09"}
+[2025-09-09 07:43:28] WHERE ventas: DATE(fecha_venta) = :fecha
+[2025-09-09 07:43:28] Query ventas: 
+        SELECT 
+            v.id,
+            v.fecha_venta,
+            p.nombre as producto,
+            v.cantidad,
+            p.precio as precio_unitario,
+            v.monto_total,
+            v.metodo_pago
+        FROM ventas v
+        JOIN productos p ON v.producto_id = p.id
+        WHERE DATE(fecha_venta) = :fecha
+        ORDER BY v.fecha_venta DESC
+    
+[2025-09-09 07:43:28] Ventas encontradas: 0
+[2025-09-09 07:43:28] Totales ventas: {"total":"0.00","efectivo":"0.00","tarjeta":"0.00","transferencia":"0.00"}
+[2025-09-09 07:43:28] WHERE miembros: DATE(fecha_registro) = :fecha
+[2025-09-09 07:43:28] Miembros encontrados: 0
+[2025-09-09 07:43:28] Totales inscripciones: {"total_miembros":0,"total_ingresos":"0","hombres":"0","mujeres":"0"}
+[2025-09-09 07:43:28] Estructura de movimientos_caja: [{"Field":"id","Type":"int(11)","Null":"NO","Key":"PRI","Default":null,"Extra":"auto_increment"},{"Field":"tipo","Type":"enum('ingreso','egreso')","Null":"NO","Key":"","Default":null,"Extra":""},{"Field":"monto","Type":"decimal(10,2)","Null":"NO","Key":"","Default":null,"Extra":""},{"Field":"motivo","Type":"varchar(255)","Null":"NO","Key":"","Default":null,"Extra":""},{"Field":"fecha_movimiento","Type":"timestamp","Null":"YES","Key":"","Default":"current_timestamp()","Extra":""}]
+[2025-09-09 07:43:28] WHERE movimientos: DATE(fecha_actualizacion) = :fecha
+[2025-09-09 07:43:28] Query movimientos: 
+        SELECT id, tipo, monto, fecha_actualizacion as fecha
+        FROM movimientos_caja
+        WHERE DATE(fecha_actualizacion) = :fecha
+        ORDER BY fecha_actualizacion DESC
+    
+[2025-09-09 07:43:28] Error PDO: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'fecha_actualizacion' in 'field list'
+[2025-09-09 07:43:35] Conexión a BD exitosa
+[2025-09-09 07:43:35] Tipo de reporte: dia
+[2025-09-09 07:43:35] Filtro base: DATE(%s) = :fecha
+[2025-09-09 07:43:35] Parámetros: {":fecha":"2025-09-09"}
+[2025-09-09 07:43:35] WHERE ventas: DATE(fecha_venta) = :fecha
+[2025-09-09 07:43:35] Query ventas: 
+        SELECT 
+            v.id,
+            v.fecha_venta,
+            p.nombre as producto,
+            v.cantidad,
+            p.precio as precio_unitario,
+            v.monto_total,
+            v.metodo_pago
+        FROM ventas v
+        JOIN productos p ON v.producto_id = p.id
+        WHERE DATE(fecha_venta) = :fecha
+        ORDER BY v.fecha_venta DESC
+    
+[2025-09-09 07:43:35] Ventas encontradas: 0
+[2025-09-09 07:43:35] Totales ventas: {"total":"0.00","efectivo":"0.00","tarjeta":"0.00","transferencia":"0.00"}
+[2025-09-09 07:43:35] WHERE miembros: DATE(fecha_registro) = :fecha
+[2025-09-09 07:43:35] Miembros encontrados: 0
+[2025-09-09 07:43:35] Totales inscripciones: {"total_miembros":0,"total_ingresos":"0","hombres":"0","mujeres":"0"}
+[2025-09-09 07:43:35] Estructura de movimientos_caja: [{"Field":"id","Type":"int(11)","Null":"NO","Key":"PRI","Default":null,"Extra":"auto_increment"},{"Field":"tipo","Type":"enum('ingreso','egreso')","Null":"NO","Key":"","Default":null,"Extra":""},{"Field":"monto","Type":"decimal(10,2)","Null":"NO","Key":"","Default":null,"Extra":""},{"Field":"motivo","Type":"varchar(255)","Null":"NO","Key":"","Default":null,"Extra":""},{"Field":"fecha_movimiento","Type":"timestamp","Null":"YES","Key":"","Default":"current_timestamp()","Extra":""}]
+[2025-09-09 07:43:35] WHERE movimientos: DATE(fecha_actualizacion) = :fecha
+[2025-09-09 07:43:35] Query movimientos: 
+        SELECT id, tipo, monto, fecha_actualizacion as fecha
+        FROM movimientos_caja
+        WHERE DATE(fecha_actualizacion) = :fecha
+        ORDER BY fecha_actualizacion DESC
+    
+[2025-09-09 07:43:35] Error PDO: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'fecha_actualizacion' in 'field list'
+[2025-09-09 07:43:38] Conexión a BD exitosa
+[2025-09-09 07:43:38] Tipo de reporte: mes
+[2025-09-09 07:43:38] Filtro base: DATE(%s) BETWEEN :primerDia AND :ultimoDia
+[2025-09-09 07:43:38] Parámetros: {":primerDia":"2025-09-01",":ultimoDia":"2025-09-30"}
+[2025-09-09 07:43:38] WHERE ventas: DATE(fecha_venta) BETWEEN :primerDia AND :ultimoDia
+[2025-09-09 07:43:38] Query ventas: 
+        SELECT 
+            v.id,
+            v.fecha_venta,
+            p.nombre as producto,
+            v.cantidad,
+            p.precio as precio_unitario,
+            v.monto_total,
+            v.metodo_pago
+        FROM ventas v
+        JOIN productos p ON v.producto_id = p.id
+        WHERE DATE(fecha_venta) BETWEEN :primerDia AND :ultimoDia
+        ORDER BY v.fecha_venta DESC
+    
+[2025-09-09 07:43:38] Ventas encontradas: 17
+[2025-09-09 07:43:38] Totales ventas: {"total":"7294.24","efectivo":"2600.00","tarjeta":"0.00","transferencia":"4694.24"}
+[2025-09-09 07:43:38] WHERE miembros: DATE(fecha_registro) BETWEEN :primerDia AND :ultimoDia
+[2025-09-09 07:43:38] Miembros encontrados: 6
+[2025-09-09 07:43:38] Totales inscripciones: {"total_miembros":6,"total_ingresos":"1600","hombres":"3","mujeres":"3"}
+[2025-09-09 07:43:38] Estructura de movimientos_caja: [{"Field":"id","Type":"int(11)","Null":"NO","Key":"PRI","Default":null,"Extra":"auto_increment"},{"Field":"tipo","Type":"enum('ingreso','egreso')","Null":"NO","Key":"","Default":null,"Extra":""},{"Field":"monto","Type":"decimal(10,2)","Null":"NO","Key":"","Default":null,"Extra":""},{"Field":"motivo","Type":"varchar(255)","Null":"NO","Key":"","Default":null,"Extra":""},{"Field":"fecha_movimiento","Type":"timestamp","Null":"YES","Key":"","Default":"current_timestamp()","Extra":""}]
+[2025-09-09 07:43:38] WHERE movimientos: DATE(fecha_actualizacion) BETWEEN :primerDia AND :ultimoDia
+[2025-09-09 07:43:38] Query movimientos: 
+        SELECT id, tipo, monto, fecha_actualizacion as fecha
+        FROM movimientos_caja
+        WHERE DATE(fecha_actualizacion) BETWEEN :primerDia AND :ultimoDia
+        ORDER BY fecha_actualizacion DESC
+    
+[2025-09-09 07:43:38] Error PDO: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'fecha_actualizacion' in 'field list'
+[2025-09-09 07:44:30] Conexión a BD exitosa
+[2025-09-09 07:44:30] Tipo de reporte: dia
+[2025-09-09 07:44:30] Filtro base: DATE(%s) = :fecha
+[2025-09-09 07:44:30] Parámetros: {":fecha":"2025-09-09"}
+[2025-09-09 07:44:30] WHERE ventas: DATE(fecha_venta) = :fecha
+[2025-09-09 07:44:30] Query ventas: 
+        SELECT 
+            v.id,
+            v.fecha_venta,
+            p.nombre as producto,
+            v.cantidad,
+            p.precio as precio_unitario,
+            v.monto_total,
+            v.metodo_pago
+        FROM ventas v
+        JOIN productos p ON v.producto_id = p.id
+        WHERE DATE(fecha_venta) = :fecha
+        ORDER BY v.fecha_venta DESC
+    
+[2025-09-09 07:44:30] Ventas encontradas: 0
+[2025-09-09 07:44:30] Totales ventas: {"total":"0.00","efectivo":"0.00","tarjeta":"0.00","transferencia":"0.00"}
+[2025-09-09 07:44:30] WHERE miembros: DATE(fecha_registro) = :fecha
+[2025-09-09 07:44:30] Miembros encontrados: 0
+[2025-09-09 07:44:30] Totales inscripciones: {"total_miembros":0,"total_ingresos":"0","hombres":"0","mujeres":"0"}
+[2025-09-09 07:44:30] Estructura de movimientos_caja: [{"Field":"id","Type":"int(11)","Null":"NO","Key":"PRI","Default":null,"Extra":"auto_increment"},{"Field":"tipo","Type":"enum('ingreso','egreso')","Null":"NO","Key":"","Default":null,"Extra":""},{"Field":"monto","Type":"decimal(10,2)","Null":"NO","Key":"","Default":null,"Extra":""},{"Field":"motivo","Type":"varchar(255)","Null":"NO","Key":"","Default":null,"Extra":""},{"Field":"fecha_movimiento","Type":"timestamp","Null":"YES","Key":"","Default":"current_timestamp()","Extra":""}]
+[2025-09-09 07:44:30] WHERE movimientos: DATE(fecha_actualizacion) = :fecha
+[2025-09-09 07:44:30] Query movimientos: 
+        SELECT id, tipo, monto, fecha_actualizacion as fecha
+        FROM movimientos_caja
+        WHERE DATE(fecha_actualizacion) = :fecha
+        ORDER BY fecha_actualizacion DESC
+    
+[2025-09-09 07:44:30] Error PDO: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'fecha_actualizacion' in 'field list'
+[2025-09-09 07:44:33] Conexión a BD exitosa
+[2025-09-09 07:44:33] Tipo de reporte: dia
+[2025-09-09 07:44:33] Filtro base: DATE(%s) = :fecha
+[2025-09-09 07:44:33] Parámetros: {":fecha":"2025-09-09"}
+[2025-09-09 07:44:33] WHERE ventas: DATE(fecha_venta) = :fecha
+[2025-09-09 07:44:33] Query ventas: 
+        SELECT 
+            v.id,
+            v.fecha_venta,
+            p.nombre as producto,
+            v.cantidad,
+            p.precio as precio_unitario,
+            v.monto_total,
+            v.metodo_pago
+        FROM ventas v
+        JOIN productos p ON v.producto_id = p.id
+        WHERE DATE(fecha_venta) = :fecha
+        ORDER BY v.fecha_venta DESC
+    
+[2025-09-09 07:44:33] Ventas encontradas: 0
+[2025-09-09 07:44:33] Totales ventas: {"total":"0.00","efectivo":"0.00","tarjeta":"0.00","transferencia":"0.00"}
+[2025-09-09 07:44:33] WHERE miembros: DATE(fecha_registro) = :fecha
+[2025-09-09 07:44:33] Miembros encontrados: 0
+[2025-09-09 07:44:33] Totales inscripciones: {"total_miembros":0,"total_ingresos":"0","hombres":"0","mujeres":"0"}
+[2025-09-09 07:44:33] Estructura de movimientos_caja: [{"Field":"id","Type":"int(11)","Null":"NO","Key":"PRI","Default":null,"Extra":"auto_increment"},{"Field":"tipo","Type":"enum('ingreso','egreso')","Null":"NO","Key":"","Default":null,"Extra":""},{"Field":"monto","Type":"decimal(10,2)","Null":"NO","Key":"","Default":null,"Extra":""},{"Field":"motivo","Type":"varchar(255)","Null":"NO","Key":"","Default":null,"Extra":""},{"Field":"fecha_movimiento","Type":"timestamp","Null":"YES","Key":"","Default":"current_timestamp()","Extra":""}]
+[2025-09-09 07:44:33] WHERE movimientos: DATE(fecha_actualizacion) = :fecha
+[2025-09-09 07:44:33] Query movimientos: 
+        SELECT id, tipo, monto, fecha_actualizacion as fecha
+        FROM movimientos_caja
+        WHERE DATE(fecha_actualizacion) = :fecha
+        ORDER BY fecha_actualizacion DESC
+    
+[2025-09-09 07:44:33] Error PDO: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'fecha_actualizacion' in 'field list'
+[2025-09-09 07:44:33] Conexión a BD exitosa
+[2025-09-09 07:44:33] Tipo de reporte: dia
+[2025-09-09 07:44:33] Filtro base: DATE(%s) = :fecha
+[2025-09-09 07:44:33] Parámetros: {":fecha":"2025-09-09"}
+[2025-09-09 07:44:33] WHERE ventas: DATE(fecha_venta) = :fecha
+[2025-09-09 07:44:33] Query ventas: 
+        SELECT 
+            v.id,
+            v.fecha_venta,
+            p.nombre as producto,
+            v.cantidad,
+            p.precio as precio_unitario,
+            v.monto_total,
+            v.metodo_pago
+        FROM ventas v
+        JOIN productos p ON v.producto_id = p.id
+        WHERE DATE(fecha_venta) = :fecha
+        ORDER BY v.fecha_venta DESC
+    
+[2025-09-09 07:44:33] Ventas encontradas: 0
+[2025-09-09 07:44:33] Totales ventas: {"total":"0.00","efectivo":"0.00","tarjeta":"0.00","transferencia":"0.00"}
+[2025-09-09 07:44:33] WHERE miembros: DATE(fecha_registro) = :fecha
+[2025-09-09 07:44:33] Miembros encontrados: 0
+[2025-09-09 07:44:33] Totales inscripciones: {"total_miembros":0,"total_ingresos":"0","hombres":"0","mujeres":"0"}
+[2025-09-09 07:44:34] Estructura de movimientos_caja: [{"Field":"id","Type":"int(11)","Null":"NO","Key":"PRI","Default":null,"Extra":"auto_increment"},{"Field":"tipo","Type":"enum('ingreso','egreso')","Null":"NO","Key":"","Default":null,"Extra":""},{"Field":"monto","Type":"decimal(10,2)","Null":"NO","Key":"","Default":null,"Extra":""},{"Field":"motivo","Type":"varchar(255)","Null":"NO","Key":"","Default":null,"Extra":""},{"Field":"fecha_movimiento","Type":"timestamp","Null":"YES","Key":"","Default":"current_timestamp()","Extra":""}]
+[2025-09-09 07:44:34] WHERE movimientos: DATE(fecha_actualizacion) = :fecha
+[2025-09-09 07:44:34] Query movimientos: 
+        SELECT id, tipo, monto, fecha_actualizacion as fecha
+        FROM movimientos_caja
+        WHERE DATE(fecha_actualizacion) = :fecha
+        ORDER BY fecha_actualizacion DESC
+    
+[2025-09-09 07:44:34] Error PDO: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'fecha_actualizacion' in 'field list'
+[2025-09-09 07:52:57] Conexión a BD exitosa
+[2025-09-09 07:52:57] Tipo de reporte: dia
+[2025-09-09 07:52:57] Filtro base: DATE(%s) = :fecha
+[2025-09-09 07:52:57] Parámetros: {":fecha":"2025-09-09"}
+[2025-09-09 07:52:57] WHERE ventas: DATE(fecha_venta) = :fecha
+[2025-09-09 07:52:57] WHERE miembros: DATE(fecha_registro) = :fecha
+[2025-09-09 07:52:57] WHERE movimientos: DATE(fecha_movimiento) = :fecha
+[2025-09-09 07:52:57] Query ventas: 
+        SELECT 
+            v.id,
+            v.fecha_venta,
+            p.nombre as producto,
+            v.cantidad,
+            p.precio as precio_unitario,
+            v.monto_total,
+            v.metodo_pago
+        FROM ventas v
+        JOIN productos p ON v.producto_id = p.id
+        WHERE DATE(fecha_venta) = :fecha
+        ORDER BY v.fecha_venta DESC
+    
+[2025-09-09 07:52:57] Ventas encontradas: 0
+[2025-09-09 07:52:57] Totales ventas: {"total":"0.00","efectivo":"0.00","tarjeta":"0.00","transferencia":"0.00"}
+[2025-09-09 07:52:57] Miembros encontrados: 0
+[2025-09-09 07:52:57] Totales inscripciones: {"total_miembros":0,"total_ingresos":"0","hombres":"0","mujeres":"0"}
+[2025-09-09 07:52:57] Query movimientos: 
+        SELECT 
+            id,
+            tipo,
+            monto,
+            motivo,
+            fecha_movimiento as fecha
+        FROM movimientos_caja
+        WHERE DATE(fecha_movimiento) = :fecha
+        ORDER BY fecha_movimiento DESC
+    
+[2025-09-09 07:52:57] Movimientos encontrados: 0
+[2025-09-09 07:52:57] Total retiros: {"total_retiros":"0.00"}
+[2025-09-09 07:52:57] Saldo caja: {"saldo_actual":"0.00"}
+[2025-09-09 07:52:57] Efectivo en caja calculado: 0
+[2025-09-09 07:52:57] Respuesta final preparada
+[2025-09-09 07:53:06] Conexión a BD exitosa
+[2025-09-09 07:53:06] Tipo de reporte: dia
+[2025-09-09 07:53:06] Filtro base: DATE(%s) = :fecha
+[2025-09-09 07:53:06] Parámetros: {":fecha":"2025-09-09"}
+[2025-09-09 07:53:06] WHERE ventas: DATE(fecha_venta) = :fecha
+[2025-09-09 07:53:06] WHERE miembros: DATE(fecha_registro) = :fecha
+[2025-09-09 07:53:06] WHERE movimientos: DATE(fecha_movimiento) = :fecha
+[2025-09-09 07:53:06] Query ventas: 
+        SELECT 
+            v.id,
+            v.fecha_venta,
+            p.nombre as producto,
+            v.cantidad,
+            p.precio as precio_unitario,
+            v.monto_total,
+            v.metodo_pago
+        FROM ventas v
+        JOIN productos p ON v.producto_id = p.id
+        WHERE DATE(fecha_venta) = :fecha
+        ORDER BY v.fecha_venta DESC
+    
+[2025-09-09 07:53:06] Ventas encontradas: 0
+[2025-09-09 07:53:06] Totales ventas: {"total":"0.00","efectivo":"0.00","tarjeta":"0.00","transferencia":"0.00"}
+[2025-09-09 07:53:06] Miembros encontrados: 0
+[2025-09-09 07:53:06] Totales inscripciones: {"total_miembros":0,"total_ingresos":"0","hombres":"0","mujeres":"0"}
+[2025-09-09 07:53:06] Query movimientos: 
+        SELECT 
+            id,
+            tipo,
+            monto,
+            motivo,
+            fecha_movimiento as fecha
+        FROM movimientos_caja
+        WHERE DATE(fecha_movimiento) = :fecha
+        ORDER BY fecha_movimiento DESC
+    
+[2025-09-09 07:53:06] Movimientos encontrados: 0
+[2025-09-09 07:53:06] Total retiros: {"total_retiros":"0.00"}
+[2025-09-09 07:53:06] Saldo caja: {"saldo_actual":"0.00"}
+[2025-09-09 07:53:06] Efectivo en caja calculado: 0
+[2025-09-09 07:53:06] Respuesta final preparada
+[2025-09-09 07:53:17] Conexión a BD exitosa
+[2025-09-09 07:53:17] Tipo de reporte: mes
+[2025-09-09 07:53:17] Filtro base: DATE(%s) BETWEEN :primerDia AND :ultimoDia
+[2025-09-09 07:53:17] Parámetros: {":primerDia":"2025-09-01",":ultimoDia":"2025-09-30"}
+[2025-09-09 07:53:17] WHERE ventas: DATE(fecha_venta) BETWEEN :primerDia AND :ultimoDia
+[2025-09-09 07:53:17] WHERE miembros: DATE(fecha_registro) BETWEEN :primerDia AND :ultimoDia
+[2025-09-09 07:53:17] WHERE movimientos: DATE(fecha_movimiento) BETWEEN :primerDia AND :ultimoDia
+[2025-09-09 07:53:17] Query ventas: 
+        SELECT 
+            v.id,
+            v.fecha_venta,
+            p.nombre as producto,
+            v.cantidad,
+            p.precio as precio_unitario,
+            v.monto_total,
+            v.metodo_pago
+        FROM ventas v
+        JOIN productos p ON v.producto_id = p.id
+        WHERE DATE(fecha_venta) BETWEEN :primerDia AND :ultimoDia
+        ORDER BY v.fecha_venta DESC
+    
+[2025-09-09 07:53:17] Ventas encontradas: 17
+[2025-09-09 07:53:17] Totales ventas: {"total":"7294.24","efectivo":"2600.00","tarjeta":"0.00","transferencia":"4694.24"}
+[2025-09-09 07:53:17] Miembros encontrados: 6
+[2025-09-09 07:53:17] Totales inscripciones: {"total_miembros":6,"total_ingresos":"1600","hombres":"3","mujeres":"3"}
+[2025-09-09 07:53:17] Query movimientos: 
+        SELECT 
+            id,
+            tipo,
+            monto,
+            motivo,
+            fecha_movimiento as fecha
+        FROM movimientos_caja
+        WHERE DATE(fecha_movimiento) BETWEEN :primerDia AND :ultimoDia
+        ORDER BY fecha_movimiento DESC
+    
+[2025-09-09 07:53:17] Movimientos encontrados: 5
+[2025-09-09 07:53:17] Total retiros: {"total_retiros":"0.00"}
+[2025-09-09 07:53:17] Miembros mes anterior: 1
+[2025-09-09 07:53:17] Crecimiento: 500%
+[2025-09-09 07:53:17] Saldo caja: {"saldo_actual":"0.00"}
+[2025-09-09 07:53:17] Efectivo en caja calculado: 1
+[2025-09-09 07:53:17] Respuesta final preparada
+[2025-09-09 07:55:22] Conexión a BD exitosa
+[2025-09-09 07:55:22] Tipo de reporte: dia
+[2025-09-09 07:55:22] Filtro base: DATE(%s) = :fecha
+[2025-09-09 07:55:22] Parámetros: {":fecha":"2025-09-09"}
+[2025-09-09 07:55:22] WHERE ventas: DATE(fecha_venta) = :fecha
+[2025-09-09 07:55:22] WHERE miembros: DATE(fecha_registro) = :fecha
+[2025-09-09 07:55:22] WHERE movimientos: DATE(fecha_movimiento) = :fecha
+[2025-09-09 07:55:22] Query ventas: 
+        SELECT 
+            v.id,
+            v.fecha_venta,
+            p.nombre as producto,
+            v.cantidad,
+            p.precio as precio_unitario,
+            v.monto_total,
+            v.metodo_pago
+        FROM ventas v
+        JOIN productos p ON v.producto_id = p.id
+        WHERE DATE(fecha_venta) = :fecha
+        ORDER BY v.fecha_venta DESC
+    
+[2025-09-09 07:55:22] Ventas encontradas: 0
+[2025-09-09 07:55:22] Totales ventas: {"total":"0.00","efectivo":"0.00","tarjeta":"0.00","transferencia":"0.00"}
+[2025-09-09 07:55:22] Miembros encontrados: 0
+[2025-09-09 07:55:22] Totales inscripciones: {"total_miembros":0,"total_ingresos":"0","hombres":"0","mujeres":"0"}
+[2025-09-09 07:55:22] Query movimientos: 
+        SELECT 
+            id,
+            tipo,
+            monto,
+            motivo,
+            fecha_movimiento as fecha
+        FROM movimientos_caja
+        WHERE DATE(fecha_movimiento) = :fecha
+        ORDER BY fecha_movimiento DESC
+    
+[2025-09-09 07:55:22] Movimientos encontrados: 0
+[2025-09-09 07:55:22] Total retiros: {"total_retiros":"0.00"}
+[2025-09-09 07:55:22] Saldo caja: {"saldo_actual":"0.00"}
+[2025-09-09 07:55:22] Efectivo en caja calculado: 0
+[2025-09-09 07:55:22] Respuesta final preparada
+[2025-09-09 07:55:28] Conexión a BD exitosa
+[2025-09-09 07:55:28] Tipo de reporte: mes
+[2025-09-09 07:55:28] Filtro base: DATE(%s) BETWEEN :primerDia AND :ultimoDia
+[2025-09-09 07:55:28] Parámetros: {":primerDia":"2025-09-01",":ultimoDia":"2025-09-30"}
+[2025-09-09 07:55:28] WHERE ventas: DATE(fecha_venta) BETWEEN :primerDia AND :ultimoDia
+[2025-09-09 07:55:28] WHERE miembros: DATE(fecha_registro) BETWEEN :primerDia AND :ultimoDia
+[2025-09-09 07:55:28] WHERE movimientos: DATE(fecha_movimiento) BETWEEN :primerDia AND :ultimoDia
+[2025-09-09 07:55:28] Query ventas: 
+        SELECT 
+            v.id,
+            v.fecha_venta,
+            p.nombre as producto,
+            v.cantidad,
+            p.precio as precio_unitario,
+            v.monto_total,
+            v.metodo_pago
+        FROM ventas v
+        JOIN productos p ON v.producto_id = p.id
+        WHERE DATE(fecha_venta) BETWEEN :primerDia AND :ultimoDia
+        ORDER BY v.fecha_venta DESC
+    
+[2025-09-09 07:55:28] Ventas encontradas: 17
+[2025-09-09 07:55:28] Totales ventas: {"total":"7294.24","efectivo":"2600.00","tarjeta":"0.00","transferencia":"4694.24"}
+[2025-09-09 07:55:28] Miembros encontrados: 6
+[2025-09-09 07:55:28] Totales inscripciones: {"total_miembros":6,"total_ingresos":"1600","hombres":"3","mujeres":"3"}
+[2025-09-09 07:55:28] Query movimientos: 
+        SELECT 
+            id,
+            tipo,
+            monto,
+            motivo,
+            fecha_movimiento as fecha
+        FROM movimientos_caja
+        WHERE DATE(fecha_movimiento) BETWEEN :primerDia AND :ultimoDia
+        ORDER BY fecha_movimiento DESC
+    
+[2025-09-09 07:55:28] Movimientos encontrados: 5
+[2025-09-09 07:55:28] Total retiros: {"total_retiros":"0.00"}
+[2025-09-09 07:55:28] Miembros mes anterior: 1
+[2025-09-09 07:55:28] Crecimiento: 500%
+[2025-09-09 07:55:28] Saldo caja: {"saldo_actual":"0.00"}
+[2025-09-09 07:55:28] Efectivo en caja calculado: 1
+[2025-09-09 07:55:28] Respuesta final preparada
+[2025-09-09 17:57:28] Conexión a BD exitosa
+[2025-09-09 17:57:28] Tipo de reporte: dia
+[2025-09-09 17:57:28] Filtro base: DATE(%s) = :fecha
+[2025-09-09 17:57:28] Parámetros: {":fecha":"2025-09-09"}
+[2025-09-09 17:57:28] WHERE ventas: DATE(fecha_venta) = :fecha
+[2025-09-09 17:57:28] WHERE miembros: DATE(fecha_registro) = :fecha
+[2025-09-09 17:57:28] WHERE movimientos: DATE(fecha_movimiento) = :fecha
+[2025-09-09 17:57:28] Query ventas: 
+        SELECT 
+            v.id,
+            v.fecha_venta,
+            p.nombre as producto,
+            v.cantidad,
+            p.precio as precio_unitario,
+            v.monto_total,
+            v.metodo_pago
+        FROM ventas v
+        JOIN productos p ON v.producto_id = p.id
+        WHERE DATE(fecha_venta) = :fecha
+        ORDER BY v.fecha_venta DESC
+    
+[2025-09-09 17:57:28] Ventas encontradas: 0
+[2025-09-09 17:57:28] Totales ventas: {"total":"0.00","efectivo":"0.00","tarjeta":"0.00","transferencia":"0.00"}
+[2025-09-09 17:57:28] Miembros encontrados: 1
+[2025-09-09 17:57:28] Totales inscripciones: {"total_miembros":1,"total_ingresos":"200","hombres":"0","mujeres":"1"}
+[2025-09-09 17:57:28] Query movimientos: 
+        SELECT 
+            id,
+            tipo,
+            monto,
+            motivo,
+            fecha_movimiento as fecha
+        FROM movimientos_caja
+        WHERE DATE(fecha_movimiento) = :fecha
+        ORDER BY fecha_movimiento DESC
+    
+[2025-09-09 17:57:28] Movimientos encontrados: 1
+[2025-09-09 17:57:28] Total retiros: {"total_retiros":"0.00"}
+[2025-09-09 17:57:28] Saldo caja: {"saldo_actual":"0.00"}
+[2025-09-09 17:57:28] Efectivo en caja calculado: 1
+[2025-09-09 17:57:28] Respuesta final preparada
+[2025-09-09 18:01:34] Conexión a BD exitosa
+[2025-09-09 18:01:34] Tipo de reporte: dia
+[2025-09-09 18:01:34] Filtro base: DATE(%s) = :fecha
+[2025-09-09 18:01:34] Parámetros: {":fecha":"2025-09-09"}
+[2025-09-09 18:01:34] WHERE ventas: DATE(fecha_venta) = :fecha
+[2025-09-09 18:01:34] WHERE miembros: DATE(fecha_registro) = :fecha
+[2025-09-09 18:01:34] WHERE movimientos: DATE(fecha_movimiento) = :fecha
+[2025-09-09 18:01:34] Query ventas: 
+        SELECT 
+            v.id,
+            v.fecha_venta,
+            p.nombre as producto,
+            v.cantidad,
+            p.precio as precio_unitario,
+            v.monto_total,
+            v.metodo_pago
+        FROM ventas v
+        JOIN productos p ON v.producto_id = p.id
+        WHERE DATE(fecha_venta) = :fecha
+        ORDER BY v.fecha_venta DESC
+    
+[2025-09-09 18:01:34] Ventas encontradas: 0
+[2025-09-09 18:01:34] Totales ventas: {"total":"0.00","efectivo":"0.00","tarjeta":"0.00","transferencia":"0.00"}
+[2025-09-09 18:01:34] Miembros encontrados: 1
+[2025-09-09 18:01:34] Totales inscripciones: {"total_miembros":1,"total_ingresos":"200","hombres":"0","mujeres":"1"}
+[2025-09-09 18:01:34] Query movimientos: 
+        SELECT 
+            id,
+            tipo,
+            monto,
+            motivo,
+            fecha_movimiento as fecha
+        FROM movimientos_caja
+        WHERE DATE(fecha_movimiento) = :fecha
+        ORDER BY fecha_movimiento DESC
+    
+[2025-09-09 18:01:34] Movimientos encontrados: 1
+[2025-09-09 18:01:34] Total retiros: {"total_retiros":"0.00"}
+[2025-09-09 18:01:34] Saldo caja: {"saldo_actual":"0.00"}
+[2025-09-09 18:01:34] Efectivo en caja calculado: 1
+[2025-09-09 18:01:34] Respuesta final preparada
+[2025-09-09 18:01:37] Conexión a BD exitosa
+[2025-09-09 18:01:37] Tipo de reporte: mes
+[2025-09-09 18:01:37] Filtro base: DATE(%s) BETWEEN :primerDia AND :ultimoDia
+[2025-09-09 18:01:37] Parámetros: {":primerDia":"2025-09-01",":ultimoDia":"2025-09-30"}
+[2025-09-09 18:01:37] WHERE ventas: DATE(fecha_venta) BETWEEN :primerDia AND :ultimoDia
+[2025-09-09 18:01:37] WHERE miembros: DATE(fecha_registro) BETWEEN :primerDia AND :ultimoDia
+[2025-09-09 18:01:37] WHERE movimientos: DATE(fecha_movimiento) BETWEEN :primerDia AND :ultimoDia
+[2025-09-09 18:01:37] Query ventas: 
+        SELECT 
+            v.id,
+            v.fecha_venta,
+            p.nombre as producto,
+            v.cantidad,
+            p.precio as precio_unitario,
+            v.monto_total,
+            v.metodo_pago
+        FROM ventas v
+        JOIN productos p ON v.producto_id = p.id
+        WHERE DATE(fecha_venta) BETWEEN :primerDia AND :ultimoDia
+        ORDER BY v.fecha_venta DESC
+    
+[2025-09-09 18:01:37] Ventas encontradas: 17
+[2025-09-09 18:01:37] Totales ventas: {"total":"7294.24","efectivo":"2600.00","tarjeta":"0.00","transferencia":"4694.24"}
+[2025-09-09 18:01:37] Miembros encontrados: 7
+[2025-09-09 18:01:37] Totales inscripciones: {"total_miembros":7,"total_ingresos":"1800","hombres":"3","mujeres":"4"}
+[2025-09-09 18:01:37] Query movimientos: 
+        SELECT 
+            id,
+            tipo,
+            monto,
+            motivo,
+            fecha_movimiento as fecha
+        FROM movimientos_caja
+        WHERE DATE(fecha_movimiento) BETWEEN :primerDia AND :ultimoDia
+        ORDER BY fecha_movimiento DESC
+    
+[2025-09-09 18:01:37] Movimientos encontrados: 6
+[2025-09-09 18:01:37] Total retiros: {"total_retiros":"0.00"}
+[2025-09-09 18:01:37] Miembros mes anterior: 1
+[2025-09-09 18:01:37] Crecimiento: 600%
+[2025-09-09 18:01:37] Saldo caja: {"saldo_actual":"0.00"}
+[2025-09-09 18:01:37] Efectivo en caja calculado: 1
+[2025-09-09 18:01:37] Respuesta final preparada
+[2025-09-09 18:05:12] Conexión a BD exitosa
+[2025-09-09 18:05:12] Tipo de reporte: dia
+[2025-09-09 18:05:12] Filtro base: DATE(%s) = :fecha
+[2025-09-09 18:05:12] Parámetros: {":fecha":"2025-09-09"}
+[2025-09-09 18:05:12] WHERE ventas: DATE(fecha_venta) = :fecha
+[2025-09-09 18:05:12] WHERE miembros: DATE(fecha_registro) = :fecha
+[2025-09-09 18:05:12] WHERE movimientos: DATE(fecha_movimiento) = :fecha
+[2025-09-09 18:05:12] Query ventas: 
+        SELECT 
+            v.id,
+            v.fecha_venta,
+            p.nombre as producto,
+            v.cantidad,
+            p.precio as precio_unitario,
+            v.monto_total,
+            v.metodo_pago
+        FROM ventas v
+        JOIN productos p ON v.producto_id = p.id
+        WHERE DATE(fecha_venta) = :fecha
+        ORDER BY v.fecha_venta DESC
+    
+[2025-09-09 18:05:12] Ventas encontradas: 0
+[2025-09-09 18:05:12] Totales ventas: {"total":"0.00","efectivo":"0.00","tarjeta":"0.00","transferencia":"0.00"}
+[2025-09-09 18:05:12] Miembros encontrados: 1
+[2025-09-09 18:05:12] Totales inscripciones: {"total_miembros":1,"total_ingresos":"200","hombres":"0","mujeres":"1"}
+[2025-09-09 18:05:12] Query movimientos: 
+        SELECT 
+            id,
+            tipo,
+            monto,
+            motivo,
+            fecha_movimiento as fecha
+        FROM movimientos_caja
+        WHERE DATE(fecha_movimiento) = :fecha
+        ORDER BY fecha_movimiento DESC
+    
+[2025-09-09 18:05:12] Movimientos encontrados: 1
+[2025-09-09 18:05:12] Total retiros: {"total_retiros":"0.00"}
+[2025-09-09 18:05:12] Saldo caja: {"saldo_actual":"0.00"}
+[2025-09-09 18:05:12] Efectivo en caja calculado: 1
+[2025-09-09 18:05:12] Respuesta final preparada
+[2025-09-09 18:05:19] Conexión a BD exitosa
+[2025-09-09 18:05:19] Tipo de reporte: dia
+[2025-09-09 18:05:19] Filtro base: DATE(%s) = :fecha
+[2025-09-09 18:05:19] Parámetros: {":fecha":"2025-09-09"}
+[2025-09-09 18:05:19] WHERE ventas: DATE(fecha_venta) = :fecha
+[2025-09-09 18:05:19] WHERE miembros: DATE(fecha_registro) = :fecha
+[2025-09-09 18:05:19] WHERE movimientos: DATE(fecha_movimiento) = :fecha
+[2025-09-09 18:05:19] Query ventas: 
+        SELECT 
+            v.id,
+            v.fecha_venta,
+            p.nombre as producto,
+            v.cantidad,
+            p.precio as precio_unitario,
+            v.monto_total,
+            v.metodo_pago
+        FROM ventas v
+        JOIN productos p ON v.producto_id = p.id
+        WHERE DATE(fecha_venta) = :fecha
+        ORDER BY v.fecha_venta DESC
+    
+[2025-09-09 18:05:19] Ventas encontradas: 0
+[2025-09-09 18:05:19] Totales ventas: {"total":"0.00","efectivo":"0.00","tarjeta":"0.00","transferencia":"0.00"}
+[2025-09-09 18:05:19] Miembros encontrados: 1
+[2025-09-09 18:05:19] Totales inscripciones: {"total_miembros":1,"total_ingresos":"200","hombres":"0","mujeres":"1"}
+[2025-09-09 18:05:19] Query movimientos: 
+        SELECT 
+            id,
+            tipo,
+            monto,
+            motivo,
+            fecha_movimiento as fecha
+        FROM movimientos_caja
+        WHERE DATE(fecha_movimiento) = :fecha
+        ORDER BY fecha_movimiento DESC
+    
+[2025-09-09 18:05:19] Movimientos encontrados: 1
+[2025-09-09 18:05:19] Total retiros: {"total_retiros":"0.00"}
+[2025-09-09 18:05:19] Saldo caja: {"saldo_actual":"0.00"}
+[2025-09-09 18:05:19] Efectivo en caja calculado: 1
+[2025-09-09 18:05:19] Respuesta final preparada
+[2025-09-09 20:35:48] Conexión a BD exitosa
+[2025-09-09 20:35:48] Tipo de reporte: dia
+[2025-09-09 20:35:48] Filtro base: DATE(%s) = :fecha
+[2025-09-09 20:35:48] Parámetros: {":fecha":"2025-09-09"}
+[2025-09-09 20:35:48] WHERE ventas: DATE(fecha_venta) = :fecha
+[2025-09-09 20:35:48] WHERE miembros: DATE(fecha_registro) = :fecha
+[2025-09-09 20:35:48] WHERE movimientos: DATE(fecha_movimiento) = :fecha
+[2025-09-09 20:35:48] Query ventas: 
+        SELECT 
+            v.id,
+            v.fecha_venta,
+            p.nombre as producto,
+            v.cantidad,
+            p.precio as precio_unitario,
+            v.monto_total,
+            v.metodo_pago
+        FROM ventas v
+        JOIN productos p ON v.producto_id = p.id
+        WHERE DATE(fecha_venta) = :fecha
+        ORDER BY v.fecha_venta DESC
+    
+[2025-09-09 20:35:48] Ventas encontradas: 2
+[2025-09-09 20:35:48] Totales ventas: {"total":"822.00","efectivo":"800.00","tarjeta":"0.00","transferencia":"22.00"}
+[2025-09-09 20:35:48] Miembros encontrados: 1
+[2025-09-09 20:35:48] Totales inscripciones: {"total_miembros":1,"total_ingresos":"200","hombres":"0","mujeres":"1"}
+[2025-09-09 20:35:48] Query movimientos: 
+        SELECT 
+            id,
+            tipo,
+            monto,
+            motivo,
+            fecha_movimiento as fecha
+        FROM movimientos_caja
+        WHERE DATE(fecha_movimiento) = :fecha
+        ORDER BY fecha_movimiento DESC
+    
+[2025-09-09 20:35:48] Movimientos encontrados: 1
+[2025-09-09 20:35:48] Total retiros: {"total_retiros":"0.00"}
+[2025-09-09 20:35:48] Saldo caja: {"saldo_actual":"0.00"}
+[2025-09-09 20:35:48] Efectivo en caja calculado: 1
+[2025-09-09 20:35:48] Respuesta final preparada
+[2025-09-09 20:35:52] Conexión a BD exitosa
+[2025-09-09 20:35:52] Tipo de reporte: dia
+[2025-09-09 20:35:52] Filtro base: DATE(%s) = :fecha
+[2025-09-09 20:35:52] Parámetros: {":fecha":"2025-09-09"}
+[2025-09-09 20:35:52] WHERE ventas: DATE(fecha_venta) = :fecha
+[2025-09-09 20:35:52] WHERE miembros: DATE(fecha_registro) = :fecha
+[2025-09-09 20:35:52] WHERE movimientos: DATE(fecha_movimiento) = :fecha
+[2025-09-09 20:35:52] Query ventas: 
+        SELECT 
+            v.id,
+            v.fecha_venta,
+            p.nombre as producto,
+            v.cantidad,
+            p.precio as precio_unitario,
+            v.monto_total,
+            v.metodo_pago
+        FROM ventas v
+        JOIN productos p ON v.producto_id = p.id
+        WHERE DATE(fecha_venta) = :fecha
+        ORDER BY v.fecha_venta DESC
+    
+[2025-09-09 20:35:52] Ventas encontradas: 2
+[2025-09-09 20:35:52] Totales ventas: {"total":"822.00","efectivo":"800.00","tarjeta":"0.00","transferencia":"22.00"}
+[2025-09-09 20:35:52] Miembros encontrados: 1
+[2025-09-09 20:35:52] Totales inscripciones: {"total_miembros":1,"total_ingresos":"200","hombres":"0","mujeres":"1"}
+[2025-09-09 20:35:52] Query movimientos: 
+        SELECT 
+            id,
+            tipo,
+            monto,
+            motivo,
+            fecha_movimiento as fecha
+        FROM movimientos_caja
+        WHERE DATE(fecha_movimiento) = :fecha
+        ORDER BY fecha_movimiento DESC
+    
+[2025-09-09 20:35:52] Movimientos encontrados: 1
+[2025-09-09 20:35:52] Total retiros: {"total_retiros":"0.00"}
+[2025-09-09 20:35:52] Saldo caja: {"saldo_actual":"0.00"}
+[2025-09-09 20:35:52] Efectivo en caja calculado: 1
+[2025-09-09 20:35:52] Respuesta final preparada
+[2025-09-09 20:37:46] Conexión a BD exitosa
+[2025-09-09 20:37:46] Tipo de reporte: dia
+[2025-09-09 20:37:46] Filtro base: DATE(%s) = :fecha
+[2025-09-09 20:37:46] Parámetros: {":fecha":"2025-09-09"}
+[2025-09-09 20:37:46] WHERE ventas: DATE(fecha_venta) = :fecha
+[2025-09-09 20:37:46] WHERE miembros: DATE(fecha_registro) = :fecha
+[2025-09-09 20:37:46] WHERE movimientos: DATE(fecha_movimiento) = :fecha
+[2025-09-09 20:37:46] Query ventas: 
+        SELECT 
+            v.id,
+            v.fecha_venta,
+            p.nombre as producto,
+            v.cantidad,
+            p.precio as precio_unitario,
+            v.monto_total,
+            v.metodo_pago
+        FROM ventas v
+        JOIN productos p ON v.producto_id = p.id
+        WHERE DATE(fecha_venta) = :fecha
+        ORDER BY v.fecha_venta DESC
+    
+[2025-09-09 20:37:46] Ventas encontradas: 2
+[2025-09-09 20:37:46] Totales ventas: {"total":"822.00","efectivo":"800.00","tarjeta":"0.00","transferencia":"22.00"}
+[2025-09-09 20:37:46] Miembros encontrados: 3
+[2025-09-09 20:37:46] Totales inscripciones: {"total_miembros":3,"total_ingresos":"700","hombres":"1","mujeres":"2"}
+[2025-09-09 20:37:46] Query movimientos: 
+        SELECT 
+            id,
+            tipo,
+            monto,
+            motivo,
+            fecha_movimiento as fecha
+        FROM movimientos_caja
+        WHERE DATE(fecha_movimiento) = :fecha
+        ORDER BY fecha_movimiento DESC
+    
+[2025-09-09 20:37:46] Movimientos encontrados: 2
+[2025-09-09 20:37:46] Total retiros: {"total_retiros":"0.00"}
+[2025-09-09 20:37:46] Saldo caja: {"saldo_actual":"0.00"}
+[2025-09-09 20:37:46] Efectivo en caja calculado: 1
+[2025-09-09 20:37:46] Respuesta final preparada
+[2025-09-09 20:37:52] Conexión a BD exitosa
+[2025-09-09 20:37:52] Tipo de reporte: mes
+[2025-09-09 20:37:52] Filtro base: DATE(%s) BETWEEN :primerDia AND :ultimoDia
+[2025-09-09 20:37:52] Parámetros: {":primerDia":"2025-09-01",":ultimoDia":"2025-09-30"}
+[2025-09-09 20:37:52] WHERE ventas: DATE(fecha_venta) BETWEEN :primerDia AND :ultimoDia
+[2025-09-09 20:37:52] WHERE miembros: DATE(fecha_registro) BETWEEN :primerDia AND :ultimoDia
+[2025-09-09 20:37:52] WHERE movimientos: DATE(fecha_movimiento) BETWEEN :primerDia AND :ultimoDia
+[2025-09-09 20:37:52] Query ventas: 
+        SELECT 
+            v.id,
+            v.fecha_venta,
+            p.nombre as producto,
+            v.cantidad,
+            p.precio as precio_unitario,
+            v.monto_total,
+            v.metodo_pago
+        FROM ventas v
+        JOIN productos p ON v.producto_id = p.id
+        WHERE DATE(fecha_venta) BETWEEN :primerDia AND :ultimoDia
+        ORDER BY v.fecha_venta DESC
+    
+[2025-09-09 20:37:52] Ventas encontradas: 19
+[2025-09-09 20:37:52] Totales ventas: {"total":"8116.24","efectivo":"3400.00","tarjeta":"0.00","transferencia":"4716.24"}
+[2025-09-09 20:37:52] Miembros encontrados: 9
+[2025-09-09 20:37:52] Totales inscripciones: {"total_miembros":9,"total_ingresos":"2300","hombres":"4","mujeres":"5"}
+[2025-09-09 20:37:52] Query movimientos: 
+        SELECT 
+            id,
+            tipo,
+            monto,
+            motivo,
+            fecha_movimiento as fecha
+        FROM movimientos_caja
+        WHERE DATE(fecha_movimiento) BETWEEN :primerDia AND :ultimoDia
+        ORDER BY fecha_movimiento DESC
+    
+[2025-09-09 20:37:52] Movimientos encontrados: 7
+[2025-09-09 20:37:52] Total retiros: {"total_retiros":"0.00"}
+[2025-09-09 20:37:52] Miembros mes anterior: 
+[2025-09-09 20:37:52] Crecimiento: 0%
+[2025-09-09 20:37:52] Saldo caja: {"saldo_actual":"0.00"}
+[2025-09-09 20:37:52] Efectivo en caja calculado: 1
+[2025-09-09 20:37:52] Respuesta final preparada
+[2025-09-22 05:03:39] Conexión a BD exitosa
+[2025-09-22 05:03:39] Tipo de reporte: dia
+[2025-09-22 05:03:39] Filtro base: DATE(%s) = :fecha
+[2025-09-22 05:03:39] Parámetros: {":fecha":"2025-09-22"}
+[2025-09-22 05:03:39] WHERE ventas: DATE(fecha_venta) = :fecha
+[2025-09-22 05:03:39] WHERE miembros: DATE(fecha_registro) = :fecha
+[2025-09-22 05:03:39] WHERE movimientos: DATE(fecha_movimiento) = :fecha
+[2025-09-22 05:03:39] Query ventas: 
+        SELECT 
+            v.id,
+            v.fecha_venta,
+            p.nombre as producto,
+            v.cantidad,
+            p.precio as precio_unitario,
+            v.monto_total,
+            v.metodo_pago
+        FROM ventas v
+        JOIN productos p ON v.producto_id = p.id
+        WHERE DATE(fecha_venta) = :fecha
+        ORDER BY v.fecha_venta DESC
+    
+[2025-09-22 05:03:39] Ventas encontradas: 0
+[2025-09-22 05:03:39] Totales ventas: {"total":"0.00","efectivo":"0.00","tarjeta":"0.00","transferencia":"0.00"}
+[2025-09-22 05:03:39] Miembros encontrados: 0
+[2025-09-22 05:03:39] Totales inscripciones: {"total_miembros":0,"total_ingresos":"0","hombres":"0","mujeres":"0"}
+[2025-09-22 05:03:39] Query movimientos: 
+        SELECT 
+            id,
+            tipo,
+            monto,
+            motivo,
+            fecha_movimiento as fecha
+        FROM movimientos_caja
+        WHERE DATE(fecha_movimiento) = :fecha
+        ORDER BY fecha_movimiento DESC
+    
+[2025-09-22 05:03:39] Movimientos encontrados: 0
+[2025-09-22 05:03:39] Total retiros: {"total_retiros":"0.00"}
+[2025-09-22 05:03:39] Saldo caja: {"saldo_actual":"0.00"}
+[2025-09-22 05:03:39] Efectivo en caja calculado: 0
+[2025-09-22 05:03:39] Respuesta final preparada
+[2025-09-22 05:04:21] Conexión a BD exitosa
+[2025-09-22 05:04:21] Tipo de reporte: dia
+[2025-09-22 05:04:21] Filtro base: DATE(%s) = :fecha
+[2025-09-22 05:04:21] Parámetros: {":fecha":"2025-09-22"}
+[2025-09-22 05:04:21] WHERE ventas: DATE(fecha_venta) = :fecha
+[2025-09-22 05:04:21] WHERE miembros: DATE(fecha_registro) = :fecha
+[2025-09-22 05:04:21] WHERE movimientos: DATE(fecha_movimiento) = :fecha
+[2025-09-22 05:04:21] Query ventas: 
+        SELECT 
+            v.id,
+            v.fecha_venta,
+            p.nombre as producto,
+            v.cantidad,
+            p.precio as precio_unitario,
+            v.monto_total,
+            v.metodo_pago
+        FROM ventas v
+        JOIN productos p ON v.producto_id = p.id
+        WHERE DATE(fecha_venta) = :fecha
+        ORDER BY v.fecha_venta DESC
+    
+[2025-09-22 05:04:21] Ventas encontradas: 0
+[2025-09-22 05:04:21] Totales ventas: {"total":"0.00","efectivo":"0.00","tarjeta":"0.00","transferencia":"0.00"}
+[2025-09-22 05:04:21] Miembros encontrados: 0
+[2025-09-22 05:04:21] Totales inscripciones: {"total_miembros":0,"total_ingresos":"0","hombres":"0","mujeres":"0"}
+[2025-09-22 05:04:21] Query movimientos: 
+        SELECT 
+            id,
+            tipo,
+            monto,
+            motivo,
+            fecha_movimiento as fecha
+        FROM movimientos_caja
+        WHERE DATE(fecha_movimiento) = :fecha
+        ORDER BY fecha_movimiento DESC
+    
+[2025-09-22 05:04:21] Movimientos encontrados: 0
+[2025-09-22 05:04:21] Total retiros: {"total_retiros":"0.00"}
+[2025-09-22 05:04:21] Saldo caja: {"saldo_actual":"0.00"}
+[2025-09-22 05:04:21] Efectivo en caja calculado: 0
+[2025-09-22 05:04:21] Respuesta final preparada
+[2025-09-22 05:04:23] Conexión a BD exitosa
+[2025-09-22 05:04:23] Tipo de reporte: dia
+[2025-09-22 05:04:23] Filtro base: DATE(%s) = :fecha
+[2025-09-22 05:04:23] Parámetros: {":fecha":"2025-09-22"}
+[2025-09-22 05:04:23] WHERE ventas: DATE(fecha_venta) = :fecha
+[2025-09-22 05:04:23] WHERE miembros: DATE(fecha_registro) = :fecha
+[2025-09-22 05:04:23] WHERE movimientos: DATE(fecha_movimiento) = :fecha
+[2025-09-22 05:04:23] Query ventas: 
+        SELECT 
+            v.id,
+            v.fecha_venta,
+            p.nombre as producto,
+            v.cantidad,
+            p.precio as precio_unitario,
+            v.monto_total,
+            v.metodo_pago
+        FROM ventas v
+        JOIN productos p ON v.producto_id = p.id
+        WHERE DATE(fecha_venta) = :fecha
+        ORDER BY v.fecha_venta DESC
+    
+[2025-09-22 05:04:23] Ventas encontradas: 0
+[2025-09-22 05:04:23] Totales ventas: {"total":"0.00","efectivo":"0.00","tarjeta":"0.00","transferencia":"0.00"}
+[2025-09-22 05:04:23] Miembros encontrados: 0
+[2025-09-22 05:04:23] Totales inscripciones: {"total_miembros":0,"total_ingresos":"0","hombres":"0","mujeres":"0"}
+[2025-09-22 05:04:23] Query movimientos: 
+        SELECT 
+            id,
+            tipo,
+            monto,
+            motivo,
+            fecha_movimiento as fecha
+        FROM movimientos_caja
+        WHERE DATE(fecha_movimiento) = :fecha
+        ORDER BY fecha_movimiento DESC
+    
+[2025-09-22 05:04:23] Movimientos encontrados: 0
+[2025-09-22 05:04:23] Total retiros: {"total_retiros":"0.00"}
+[2025-09-22 05:04:23] Saldo caja: {"saldo_actual":"0.00"}
+[2025-09-22 05:04:23] Efectivo en caja calculado: 0
+[2025-09-22 05:04:23] Respuesta final preparada
+[2025-09-23 06:51:31] Conexión a BD exitosa
+[2025-09-23 06:51:31] Tipo de reporte: dia
+[2025-09-23 06:51:31] Filtro base: DATE(%s) = :fecha
+[2025-09-23 06:51:31] Parámetros: {":fecha":"2025-09-23"}
+[2025-09-23 06:51:31] WHERE ventas: DATE(fecha_venta) = :fecha
+[2025-09-23 06:51:31] WHERE miembros: DATE(fecha_registro) = :fecha
+[2025-09-23 06:51:31] WHERE movimientos: DATE(fecha_movimiento) = :fecha
+[2025-09-23 06:51:31] Query ventas: 
+        SELECT 
+            v.id,
+            v.fecha_venta,
+            p.nombre as producto,
+            v.cantidad,
+            p.precio as precio_unitario,
+            v.monto_total,
+            v.metodo_pago
+        FROM ventas v
+        JOIN productos p ON v.producto_id = p.id
+        WHERE DATE(fecha_venta) = :fecha
+        ORDER BY v.fecha_venta DESC
+    
+[2025-09-23 06:51:31] Ventas encontradas: 0
+[2025-09-23 06:51:31] Totales ventas: {"total":"0.00","efectivo":"0.00","tarjeta":"0.00","transferencia":"0.00"}
+[2025-09-23 06:51:31] Miembros encontrados: 0
+[2025-09-23 06:51:31] Totales inscripciones: {"total_miembros":0,"total_ingresos":"0","hombres":"0","mujeres":"0"}
+[2025-09-23 06:51:31] Query movimientos: 
+        SELECT 
+            id,
+            tipo,
+            monto,
+            motivo,
+            fecha_movimiento as fecha
+        FROM movimientos_caja
+        WHERE DATE(fecha_movimiento) = :fecha
+        ORDER BY fecha_movimiento DESC
+    
+[2025-09-23 06:51:31] Movimientos encontrados: 0
+[2025-09-23 06:51:31] Total retiros: {"total_retiros":"0.00"}
+[2025-09-23 06:51:31] Saldo caja: {"saldo_actual":"0.00"}
+[2025-09-23 06:51:31] Efectivo en caja calculado: 0
+[2025-09-23 06:51:31] Respuesta final preparada
+[2025-11-01 17:36:13] Conexión a BD exitosa
+[2025-11-01 17:36:13] Tipo de reporte: dia
+[2025-11-01 17:36:13] Filtro base: DATE(%s) = :fecha
+[2025-11-01 17:36:13] Parámetros: {":fecha":"2025-11-01"}
+[2025-11-01 17:36:13] WHERE ventas: DATE(fecha_venta) = :fecha
+[2025-11-01 17:36:13] WHERE miembros: DATE(fecha_registro) = :fecha
+[2025-11-01 17:36:13] WHERE movimientos: DATE(fecha_movimiento) = :fecha
+[2025-11-01 17:36:13] Query ventas: 
+        SELECT 
+            v.id,
+            v.fecha_venta,
+            p.nombre as producto,
+            v.cantidad,
+            p.precio as precio_unitario,
+            v.monto_total,
+            v.metodo_pago
+        FROM ventas v
+        JOIN productos p ON v.producto_id = p.id
+        WHERE DATE(fecha_venta) = :fecha
+        ORDER BY v.fecha_venta DESC
+    
+[2025-11-01 17:36:13] Ventas encontradas: 2
+[2025-11-01 17:36:13] Totales ventas: {"total":"822.00","efectivo":"822.00","tarjeta":"0.00","transferencia":"0.00"}
+[2025-11-01 17:36:13] Miembros encontrados: 2
+[2025-11-01 17:36:13] Totales inscripciones: {"total_miembros":2,"total_ingresos":"1050","hombres":"2","mujeres":"0"}
+[2025-11-01 17:36:13] Query movimientos: 
+        SELECT 
+            id,
+            tipo,
+            monto,
+            motivo,
+            fecha_movimiento as fecha
+        FROM movimientos_caja
+        WHERE DATE(fecha_movimiento) = :fecha
+        ORDER BY fecha_movimiento DESC
+    
+[2025-11-01 17:36:13] Movimientos encontrados: 2
+[2025-11-01 17:36:13] Total retiros: {"total_retiros":"0.00"}
+[2025-11-01 17:36:13] Saldo caja: {"saldo_actual":"0.00"}
+[2025-11-01 17:36:13] Efectivo en caja calculado: 1
+[2025-11-01 17:36:13] Respuesta final preparada
+[2025-11-01 17:37:07] Conexión a BD exitosa
+[2025-11-01 17:37:07] Tipo de reporte: dia
+[2025-11-01 17:37:07] Filtro base: DATE(%s) = :fecha
+[2025-11-01 17:37:07] Parámetros: {":fecha":"2025-11-01"}
+[2025-11-01 17:37:07] WHERE ventas: DATE(fecha_venta) = :fecha
+[2025-11-01 17:37:07] WHERE miembros: DATE(fecha_registro) = :fecha
+[2025-11-01 17:37:07] WHERE movimientos: DATE(fecha_movimiento) = :fecha
+[2025-11-01 17:37:07] Query ventas: 
+        SELECT 
+            v.id,
+            v.fecha_venta,
+            p.nombre as producto,
+            v.cantidad,
+            p.precio as precio_unitario,
+            v.monto_total,
+            v.metodo_pago
+        FROM ventas v
+        JOIN productos p ON v.producto_id = p.id
+        WHERE DATE(fecha_venta) = :fecha
+        ORDER BY v.fecha_venta DESC
+    
+[2025-11-01 17:37:07] Ventas encontradas: 2
+[2025-11-01 17:37:07] Totales ventas: {"total":"822.00","efectivo":"822.00","tarjeta":"0.00","transferencia":"0.00"}
+[2025-11-01 17:37:07] Miembros encontrados: 2
+[2025-11-01 17:37:07] Totales inscripciones: {"total_miembros":2,"total_ingresos":"1050","hombres":"2","mujeres":"0"}
+[2025-11-01 17:37:07] Query movimientos: 
+        SELECT 
+            id,
+            tipo,
+            monto,
+            motivo,
+            fecha_movimiento as fecha
+        FROM movimientos_caja
+        WHERE DATE(fecha_movimiento) = :fecha
+        ORDER BY fecha_movimiento DESC
+    
+[2025-11-01 17:37:07] Movimientos encontrados: 2
+[2025-11-01 17:37:07] Total retiros: {"total_retiros":"0.00"}
+[2025-11-01 17:37:07] Saldo caja: {"saldo_actual":"0.00"}
+[2025-11-01 17:37:07] Efectivo en caja calculado: 1
+[2025-11-01 17:37:07] Respuesta final preparada
+[2025-11-01 17:38:24] Conexión a BD exitosa
+[2025-11-01 17:38:24] Tipo de reporte: dia
+[2025-11-01 17:38:24] Filtro base: DATE(%s) = :fecha
+[2025-11-01 17:38:24] Parámetros: {":fecha":"2025-11-01"}
+[2025-11-01 17:38:24] WHERE ventas: DATE(fecha_venta) = :fecha
+[2025-11-01 17:38:24] WHERE miembros: DATE(fecha_registro) = :fecha
+[2025-11-01 17:38:24] WHERE movimientos: DATE(fecha_movimiento) = :fecha
+[2025-11-01 17:38:24] Query ventas: 
+        SELECT 
+            v.id,
+            v.fecha_venta,
+            p.nombre as producto,
+            v.cantidad,
+            p.precio as precio_unitario,
+            v.monto_total,
+            v.metodo_pago
+        FROM ventas v
+        JOIN productos p ON v.producto_id = p.id
+        WHERE DATE(fecha_venta) = :fecha
+        ORDER BY v.fecha_venta DESC
+    
+[2025-11-01 17:38:24] Ventas encontradas: 2
+[2025-11-01 17:38:24] Totales ventas: {"total":"822.00","efectivo":"822.00","tarjeta":"0.00","transferencia":"0.00"}
+[2025-11-01 17:38:24] Miembros encontrados: 2
+[2025-11-01 17:38:24] Totales inscripciones: {"total_miembros":2,"total_ingresos":"1050","hombres":"2","mujeres":"0"}
+[2025-11-01 17:38:24] Query movimientos: 
+        SELECT 
+            id,
+            tipo,
+            monto,
+            motivo,
+            fecha_movimiento as fecha
+        FROM movimientos_caja
+        WHERE DATE(fecha_movimiento) = :fecha
+        ORDER BY fecha_movimiento DESC
+    
+[2025-11-01 17:38:24] Movimientos encontrados: 2
+[2025-11-01 17:38:24] Total retiros: {"total_retiros":"0.00"}
+[2025-11-01 17:38:24] Saldo caja: {"saldo_actual":"0.00"}
+[2025-11-01 17:38:24] Efectivo en caja calculado: 1
+[2025-11-01 17:38:24] Respuesta final preparada

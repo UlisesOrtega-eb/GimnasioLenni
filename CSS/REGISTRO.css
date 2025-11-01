@@ -1,0 +1,354 @@
+:root {
+    --pure-white: #ffffff;
+    --soft-white: #f8f9fa;
+    --energy-orange: #ff6b35;
+    --vibrant-blue: #1e88e5;
+    --dark-blue: #0a2463;
+    --light-gray: #e9ecef;
+    --medium-gray: #ced4da;
+    --dark-text: #2b2d42;
+    --light-text: #6c757d;
+    --success-green: #28a745;
+}
+
+body {
+    background: var(--pure-white);
+    font-family: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--dark-text);
+    min-height: 100vh;
+}
+
+/* Efecto de rayos de energía sutil */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        radial-gradient(circle at 90% 5%, rgba(30, 136, 229, 0.03) 0%, transparent 25%),
+        radial-gradient(circle at 10% 80%, rgba(255, 107, 53, 0.03) 0%, transparent 25%);
+    pointer-events: none;
+    z-index: -1;
+}
+
+.gym-header {
+    background: var(--pure-white);
+    border-bottom: 3px solid var(--energy-orange);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+    padding: 1rem 0;
+}
+
+.gym-logo {
+    height: 100px;
+    width: auto;
+    transition: all 0.3s ease;
+}
+
+.gym-logo:hover {
+    transform: scale(1.05);
+}
+
+.gym-title {
+    font-weight: 900;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: linear-gradient(135deg, var(--energy-orange) 0%, var(--vibrant-blue) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0;
+}
+
+.gym-subtitle {
+    color: var(--light-text);
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+.gym-card {
+    background: var(--pure-white);
+    border: 2px solid var(--light-gray);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.gym-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    border-color: var(--energy-orange);
+}
+
+.gym-card-header {
+    background: linear-gradient(135deg, var(--pure-white) 0%, var(--soft-white) 100%);
+    border-bottom: 2px solid var(--energy-orange);
+    padding: 1.5rem;
+}
+
+.gym-card-header h3 {
+    color: var(--dark-blue);
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.gym-card-header h3 i {
+    color: var(--energy-orange);
+}
+
+.gym-input {
+    background-color: var(--pure-white);
+    border: 2px solid var(--medium-gray);
+    color: var(--dark-text);
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.gym-input:focus {
+    background-color: var(--pure-white);
+    border-color: var(--vibrant-blue);
+    box-shadow: 0 0 0 0.25rem rgba(30, 136, 229, 0.2);
+    color: var(--dark-text);
+}
+
+.gym-input::placeholder {
+    color: var(--light-text);
+    opacity: 0.7;
+}
+
+.gym-currency {
+    background-color: var(--soft-white);
+    border: 2px solid var(--medium-gray);
+    border-right: none;
+    color: var(--energy-orange);
+    font-weight: 600;
+}
+
+.form-label {
+    font-weight: 600;
+    color: var(--dark-blue);
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.gym-btn {
+    border-radius: 8px;
+    padding: 0.75rem 1.5rem;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 0.9rem;
+}
+
+.gym-btn-primary {
+    background: linear-gradient(135deg, var(--energy-orange) 0%, #e5562d 100%);
+    color: white;
+    box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+}
+
+.gym-btn-primary:hover {
+    background: linear-gradient(135deg, #e5562d 0%, #cc4c28 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
+    color: white;
+}
+
+.btn-secondary {
+    background: var(--pure-white);
+    border: 2px solid var(--vibrant-blue);
+    color: var(--vibrant-blue);
+    box-shadow: 0 2px 10px rgba(30, 136, 229, 0.15);
+}
+
+.btn-secondary:hover {
+    background: var(--vibrant-blue);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(30, 136, 229, 0.25);
+}
+
+#mensajeExito {
+    background: var(--pure-white);
+    border: 2px solid var(--success-green);
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(40, 167, 69, 0.2);
+}
+
+.success-image {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 1.5rem;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--success-green) 0%, #218838 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 25px rgba(40, 167, 69, 0.3);
+    border: 4px solid var(--energy-orange);
+}
+
+.success-image img {
+    width: 70px;
+    height: 70px;
+    filter: brightness(0) invert(1);
+}
+
+.gym-footer {
+    background: var(--dark-blue);
+    color: white;
+    margin-top: 3rem;
+    padding: 1.5rem 0;
+}
+
+.gym-footer p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Efectos de animación */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.gym-card {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* Responsividad mejorada */
+@media (max-width: 768px) {
+    .gym-title {
+        font-size: 2rem;
+    }
+
+    .gym-logo {
+        height: 80px;
+    }
+
+    .gym-card-header h3 {
+        font-size: 1.3rem;
+    }
+
+    .success-image {
+        width: 100px;
+        height: 100px;
+    }
+
+    .success-image img {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+/* Personalización del scroll */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--light-gray);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--energy-orange);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #e5562d;
+}
+
+/* Estilo para los datos de éxito */
+#successData {
+    background: var(--soft-white) !important;
+    border: 1px solid var(--light-gray);
+    border-radius: 10px;
+    color: var(--dark-text);
+    padding: 1.5rem;
+    margin-top: 1rem;
+}
+
+#successData h5 {
+    color: var(--dark-blue);
+    border-bottom: 2px solid var(--energy-orange);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+#successData p {
+    margin-bottom: 0.5rem;
+    color: var(--dark-text);
+}
+
+#successData strong {
+    color: var(--vibrant-blue);
+}
+
+/* Mejoras visuales para el formulario */
+.input-group:focus-within .gym-currency {
+    border-color: var(--vibrant-blue);
+    background-color: var(--vibrant-blue);
+    color: white;
+}
+
+/* Efecto de transición suave para todos los elementos */
+* {
+    transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Estilo para el contenedor principal */
+.container.py-4 {
+    padding-top: 2rem !important;
+    padding-bottom: 3rem !important;
+}
+
+/* Mejora para los iconos */
+.bi {
+    vertical-align: -0.125em;
+}
+
+/* Efecto de hover en tarjetas */
+.gym-card:hover .gym-card-header {
+    background: linear-gradient(135deg, var(--soft-white) 0%, #f0f3f5 100%);
+}
+
+/* Sombras mejoradas */
+.shadow-lg {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Ajustes para el mensaje de éxito */
+#mensajeExito .card-body {
+    padding: 2.5rem;
+}
+
+/* Botón de nuevo registro con estilo especial */
+#btnNuevoRegistro {
+    background: linear-gradient(135deg, var(--vibrant-blue) 0%, #1976d2 100%);
+    border: none;
+    box-shadow: 0 4px 15px rgba(30, 136, 229, 0.3);
+}
+
+#btnNuevoRegistro:hover {
+    background: linear-gradient(135deg, #1976d2 0%, #1565c0 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(30, 136, 229, 0.4);
+}

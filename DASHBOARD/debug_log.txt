@@ -1,0 +1,12 @@
+2025-09-06 01:43:46 - Received: 
+2025-09-06 01:44:20 - Received: 
+2025-09-06 01:46:58 - Received: 
+2025-09-06 01:46:59 - Received: 
+2025-09-06 01:49:18 - Received: 
+2025-09-06 01:49:19 - Received: 
+2025-09-06 01:51:00 - Received: 
+2025-09-06 01:56:55 - Received: 
+2025-09-06 01:57:04 - Received: 
+2025-09-06 02:02:42 - Received: 
+2025-09-06 02:11:06 - Received: {"id_empleado":1,"total":29.99,"metodo_pago":"transferencia","cliente_nombre":"Cliente no identificado","productos":[{"producto_id":5,"nombre":"Creatina Monohidrato","cantidad":1,"precio":29.99,"observaciones":null}]}
+2025-09-06 02:11:25 - Received: {"id_empleado":1,"total":29.99,"metodo_pago":"transferencia","cliente_nombre":"Cliente no identificado","productos":[{"producto_id":5,"nombre":"Creatina Monohidrato","cantidad":1,"precio":29.99,"observaciones":null}]}

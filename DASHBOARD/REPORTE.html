@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reportes - GYM LENIN</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="IMAGES/pizza.ico">
+    <link rel="stylesheet" href="CSS/REPORTE.css">
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo-container">
+                <img src="IMAGES/CARREÑO.png" alt="Logo Gimnasio" class="logo">
+                <div class="logo-shadow"></div>
+            </div>
+            <h1>Reportes del Gimnasio</h1>
+            <div class="fecha-hora" id="fecha-hora"></div>
+        </header>
+
+        <div class="filtros-container">
+            <div class="filtros">
+                <div class="filtro-group">
+                    <label for="tipo-reporte"><i class="fas fa-filter"></i> Tipo de Reporte:</label>
+                    <select id="tipo-reporte" class="form-control">
+                        <option value="dia">Día</option>
+                        <option value="semana">Semana</option>
+                        <option value="mes">Mes</option>
+                        <option value="personalizado">Personalizado</option>
+                    </select>
+                </div>
+
+                <div class="filtro-group" id="filtro-dia">
+                    <label for="fecha-dia"><i class="far fa-calendar-alt"></i> Seleccionar Día:</label>
+                    <input type="date" id="fecha-dia" class="form-control">
+                </div>
+
+                <div class="filtro-group" id="filtro-semana" style="display: none;">
+                    <label for="fecha-semana"><i class="far fa-calendar-week"></i> Semana que inicia (Lunes):</label>
+                    <input type="date" id="fecha-semana" class="form-control">
+                </div>
+
+                <div class="filtro-group" id="filtro-mes" style="display: none;">
+                    <label for="fecha-mes"><i class="far fa-calendar"></i> Mes:</label>
+                    <input type="month" id="fecha-mes" class="form-control">
+                </div>
+
+                <div class="filtro-group" id="filtro-personalizado" style="display: none;">
+                    <label for="fecha-inicio"><i class="fas fa-calendar-day"></i> Rango de fechas:</label>
+                    <div class="rango-fechas">
+                        <input type="date" id="fecha-inicio" class="form-control">
+                        <span>a</span>
+                        <input type="date" id="fecha-fin" class="form-control">
+                    </div>
+                </div>
+
+                <button id="generar-reporte" class="btn btn-primary pulse">
+                    <i class="fas fa-chart-bar"></i> Generar Reporte
+                </button>
+            </div>
+        </div>
+
+        <div class="resumen-ventas">
+            <div class="resumen-box slide-in">
+                <h3><i class="fas fa-money-bill-wave"></i> Ventas Efectivo</h3>
+                <p class="monto" id="ventas-efectivo">$0.00</p>
+            </div>
+            <div class="resumen-box slide-in" style="animation-delay: 0.1s;">
+                <h3><i class="fas fa-credit-card"></i> Ventas Tarjetas</h3>
+                <p class="monto" id="ventas-tarjetas">$0.00</p>
+            </div>
+            <div class="resumen-box slide-in" style="animation-delay: 0.2s;">
+                <h3><i class="fas fa-exchange-alt"></i> Ventas Transferencias</h3>
+                <p class="monto" id="ventas-transferencias">$0.00</p>
+            </div>
+            <div class="resumen-box slide-in" style="animation-delay: 0.3s;">
+                <h3><i class="fas fa-users"></i> Inscripciones</h3>
+                <p class="monto" id="total-inscripciones">$0.00</p>
+            </div>
+            <div class="resumen-box total slide-in" style="animation-delay: 0.4s;">
+                <h3><i class="fas fa-calculator"></i> Total General</h3>
+                <p class="monto" id="total-general">$0.00</p>
+            </div>
+        </div>
+
+        <section class="section">
+            <div class="section-header">
+                <h2><i class="fas fa-cash-register"></i> Efectivo en Caja</h2>
+                <div class="efectivo-container">
+                    <p class="monto-grande" id="efectivo-caja">$0.00</p>
+                    <div class="efectivo-shadow"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-header">
+                <h2><i class="fas fa-shopping-cart"></i> Ventas de Productos</h2>
+                <button id="imprimir-pdf" class="btn btn-primary">
+                    <i class="fas fa-file-pdf"></i> Exportar a PDF
+                </button>
+            </div>
+            <div class="table-container">
+                <table id="tabla-ventas">
+                    <thead>
+                        <tr>
+                            <th>FECHA/HORA</th>
+                            <th>PRODUCTO</th>
+                            <th>CANTIDAD</th>
+                            <th>P. UNITARIO</th>
+                            <th>TOTAL</th>
+                            <th>MÉTODO PAGO</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Datos dinámicos -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-header">
+                <h2><i class="fas fa-users"></i> Miembros Inscritos</h2>
+                <div class="estadisticas-miembros">
+                    <span class="badge"><i class="fas fa-male"></i> Hombres: <span id="total-hombres">0</span></span>
+                    <span class="badge"><i class="fas fa-female"></i> Mujeres: <span id="total-mujeres">0</span></span>
+                    <span class="badge"><i class="fas fa-user-plus"></i> Total: <span
+                            id="total-miembros">0</span></span>
+                </div>
+            </div>
+            <div class="table-container">
+                <table id="tabla-miembros">
+                    <thead>
+                        <tr>
+                            <th>FECHA REGISTRO</th>
+                            <th>NOMBRE</th>
+                            <th>EDAD</th>
+                            <th>SEXO</th>
+                            <th>MONTO INSCRIPCIÓN</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Datos dinámicos -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2><i class="fas fa-list-alt"></i> Movimientos de Caja</h2>
+            <div class="table-container">
+                <table id="tabla-movimientos">
+                    <thead>
+                        <tr>
+                            <th>FECHA/HORA</th>
+                            <th>TIPO</th>
+                            <th>MONTO</th>
+                            <th>CONCEPTO</th>
+                            <!-- Columna EMPLEADO se mostrará dinámicamente si existe -->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Datos dinámicos -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="section" id="seccion-analitica" style="display: none;">
+            <h2><i class="fas fa-chart-line"></i> Análisis de Crecimiento</h2>
+            <div class="analitica-container">
+                <div class="analitica-box">
+                    <h3>Crecimiento de Miembros</h3>
+                    <p class="crecimiento" id="porcentaje-crecimiento">0%</p>
+                    <p class="comparativa">vs. mes anterior: <span id="miembros-mes-anterior">0</span> miembros</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="JAVA/REPORTE.js"></script>
+</body>
+
+</html>
